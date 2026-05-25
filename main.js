@@ -166,8 +166,20 @@
 
     const backBtn = $('#modalBackBtn');
 
+    function playNextVideo() {
+      let activeIdx = -1;
+      thumbs.forEach((t, i) => {
+        if (t.classList.contains('active')) activeIdx = i;
+      });
+      const nextIdx = (activeIdx + 1) % thumbs.length;
+      const nextThumb = thumbs[nextIdx];
+      if (nextThumb) {
+        nextThumb.click();
+      }
+    }
+
     if (watchBtn) watchBtn.addEventListener('click', openModal);
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', playNextVideo);
     if (backBtn) backBtn.addEventListener('click', closeModal);
     if (backdrop) backdrop.addEventListener('click', closeModal);
 
