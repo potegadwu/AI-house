@@ -1677,5 +1677,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
 }
 
+@media (max-width: 600px) {
+  .footer-logo {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-close {
+    top: 15px !important;
+    right: 15px !important;
+  }
+  .modal-back-btn {
+    top: 15px !important;
+    left: 15px !important;
+    font-size: 10px !important;
+  }
+  .modal-player-container {
+    padding: 75px 15px 15px !important;
+  }
+}
+
+
 
 
