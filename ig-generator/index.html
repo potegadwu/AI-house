@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreator Grafiki na Instagram - Skorwider Style</title>
+    <!-- Google Fonts: Inter (for bold text) and Playfair Display (for elegant serif italic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@1,400;1,700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --panel-bg: rgba(30, 41, 59, 0.7);
+            --accent: #e2522c;
+            --accent-hover: #f97316;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, var(--text-muted) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        header h1 span {
+            color: var(--accent);
+            -webkit-text-fill-color: var(--accent);
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 65px);
+            position: relative;
+        }
+
+        /* Editor Area */
+        .workspace {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #020617;
+            padding: 2rem;
+            position: relative;
+            overflow: auto;
+        }
+
+        .canvas-container {
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            background: #111;
+            border-radius: 8px;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        canvas {
+            display: block;
+            max-height: 80vh;
+            max-width: 100%;
+            object-fit: contain;
+            cursor: grab;
+        }
+
+        canvas:active {
+            cursor: grabbing;
+        }
+
+        /* Sidebar Control Panel */
+        .sidebar {
+            width: 420px;
+            background: var(--panel-bg);
+            backdrop-filter: blur(16px);
+            border-left: 1px solid var(--border);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            overflow-y: auto;
+            z-index: 5;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        input[type="text"], textarea, select {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border);
+            color: white;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            outline: none;
+            width: 100%;
+        }
+
+        input[type="text"]:focus, textarea:focus, select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(226, 82, 44, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .slider-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        input[type="range"] {
+            flex: 1;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        .slider-value {
+            font-size: 0.8rem;
+            font-variant-numeric: tabular-nums;
+            color: var(--text-light);
+            min-width: 2.5rem;
+            text-align: right;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            flex: 1;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 14px rgba(226, 82, 44, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .safe-zone-overlay {
+            position: absolute;
+            pointer-events: none;
+            border: 2px dashed rgba(239, 68, 68, 0.6);
+            display: none;
+            z-index: 3;
+        }
+
+        /* Tips Card */
+        .info-card {
+            background: rgba(226, 82, 44, 0.1);
+            border: 1px solid rgba(226, 82, 44, 0.2);
+            border-radius: 8px;
+            padding: 0.75rem;
+            font-size: 0.8rem;
+            color: #ffedd5;
+            line-height: 1.4;
+        }
+
+        .image-selector-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .image-thumb {
+            aspect-ratio: 1.5;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            background: #222;
+        }
+
+        .image-thumb.active {
+            border-color: var(--accent);
+        }
+
+        .image-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-thumb span {
+            position: absolute;
+            bottom: 4px;
+            left: 4px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            font-size: 0.65rem;
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(15, 23, 42, 0.4);
+            padding: 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        .toggle-switch input {
+            cursor: pointer;
+            width: 40px;
+            height: 20px;
+            accent-color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><span>⚡</span> Skorwider-Style IG Graphic Generator</h1>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">Format: 1080 x 1350 px (Post 4:5 z bezpiecznym kwadratem 1:1)</div>
+    </header>
+
+    <div class="main-container">
+        <!-- Canvas Workspace -->
+        <div class="workspace">
+            <div class="canvas-container" id="container">
+                <canvas id="editorCanvas" width="1080" height="1350"></canvas>
+            </div>
+        </div>
+
+        <!-- Right Side controls -->
+        <div class="sidebar">
+            <div class="info-card">
+                <strong>💡 Wskazówka:</strong> Możesz przeciągać myszką bezpośrednio po grafice, aby ustawić idealny kadr zdjęcia! Czerwone linie pomocnicze (włączane poniżej) pokazują, co będzie widoczne w kwadratowym podglądzie na Twoim profilu IG.
+            </div>
+
+            <!-- Zdjęcie w tle -->
+            <div class="control-group">
+                <div class="section-title">Wybór Zdjęcia w Tle</div>
+                <div class="image-selector-grid">
+                    <div class="image-thumb active" id="thumb-photo" onclick="selectImage('photo')">
+                        <img src="media__1779696876865.jpg" alt="Zdjęcie główne">
+                        <span>Zdjęcie</span>
+                    </div>
+                    <div class="image-thumb" id="thumb-ref" onclick="selectImage('ref')">
+                        <img src="media__1779696883.jpg" alt="Wzór">
+                        <span>Wzór Zielony</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kadrowanie -->
+            <div class="control-group">
+                <div class="section-title">Ustawienia Kadr / Zdjęcie</div>
+                <div class="control-group">
+                    <label>Skala Zdjęcia (Zoom)</label>
+                    <div class="slider-row">
+                        <input type="range" id="zoomRange" min="0.1" max="3" step="0.01" value="1">
+                        <span class="slider-value" id="zoomValue">1.0x</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Pozycja X (Poziom)</label>
+                    <div class="slider-row">
+                        <input type="range" id="posXRange" min="-1000" max="1000" step="1" value="0">
+                        <span class="slider-value" id="posXValue">0px</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Pozycja Y (Pion)</label>
+                    <div class="slider-row">
+                        <input type="range" id="posYRange" min="-1000" max="1000" step="1" value="0">
+                        <span class="slider-value" id="posYValue">0px</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tekst Główny -->
+            <div class="control-group">
+                <div class="section-title">Tekst Główny (Wyrównany do lewej)</div>
+                <label>Treść (Użyj *gwiazdek* dla tekstu pisanego szeryfem i kolorem koralowym)</label>
+                <textarea id="mainText" placeholder="Tekst na grafice">MIEJ ODWAGĘ
+BYĆ
+*beznadziejną* W CZYMŚ,
+CO DOPIERO
+ZACZYNASZ.</textarea>
+            </div>
+
+            <div class="control-group">
+                <div class="section-title">Ustawienia Tekstu</div>
+                <div class="control-group">
+                    <label>Rozmiar Czcionki</label>
+                    <div class="slider-row">
+                        <input type="range" id="fontSizeRange" min="30" max="120" step="1" value="72">
+                        <span class="slider-value" id="fontSizeValue">72px</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Odstęp między liniami (Line Height)</label>
+                    <div class="slider-row">
+                        <input type="range" id="lineHeightRange" min="0.8" max="1.8" step="0.05" value="1.05">
+                        <span class="slider-value" id="lineHeightValue">1.05</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Pozycja pionowa tekstu (Y)</label>
+                    <div class="slider-row">
+                        <input type="range" id="textYRange" min="100" max="1000" step="5" value="380">
+                        <span class="slider-value" id="textYValue">380px</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Pozycja pozioma tekstu (X)</label>
+                    <div class="slider-row">
+                        <input type="range" id="textXRange" min="50" max="400" step="5" value="100">
+                        <span class="slider-value" id="textXValue">100px</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tekst Podrzędny -->
+            <div class="control-group">
+                <div class="section-title">Podpis Dolny (Mądrości)</div>
+                <label>Treść podpisu</label>
+                <textarea id="subText" placeholder="Podpis">Poniedziałkowe mądrości, z rana pozdrawiają</textarea>
+                
+                <label>Strona / Marka na dole</label>
+                <input type="text" id="brandText" value="SKORWIDER.PL" placeholder="np. SKORWIDER.PL">
+            </div>
+
+            <!-- Opcje Wizualne -->
+            <div class="control-group">
+                <div class="section-title">Opcje Nakładki i Linii pomocniczych</div>
+                <div class="toggle-switch">
+                    <label>Pokaż bezpieczny kwadrat 1:1 (IG Grid)</label>
+                    <input type="checkbox" id="toggleGrid" checked>
+                </div>
+                <div class="control-group" style="margin-top: 0.5rem;">
+                    <label>Gęstość ciemnego cienia pod tekstem (Overlay)</label>
+                    <div class="slider-row">
+                        <input type="range" id="overlayRange" min="0" max="1" step="0.05" value="0.75">
+                        <span class="slider-value" id="overlayValue">75%</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Styl cienia (Gradient ciemno-zielony vs. czarny)</label>
+                    <select id="overlayColor">
+                        <option value="green">Głęboka butelkowa zieleń (Skorwider Style)</option>
+                        <option value="black">Klasyczna aksamitna czerń</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Akcje -->
+            <div class="control-group" style="margin-top: auto; padding-top: 1rem;">
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="downloadImage()">💾 Pobierz Grafikę (JPG)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('editorCanvas');
+        const ctx = canvas.getContext('2d');
+        const container = document.getElementById('container');
+
+        // State variables
+        let bgImage = new Image();
+        let isRefSelected = false;
+        
+        // Image source paths
+        const sources = {
+            photo: 'media__1779696876865.jpg',
+            ref: 'media__1779696883.jpg'
+        };
+
+        // Layout state
+        let scale = 1.0;
+        let imgX = 0;
+        let imgY = 0;
+        let isDragging = false;
+        let startX, startY;
+
+        // Colors
+        const coralColor = '#e2522c';
+
+        // Load fonts and initial image
+        document.fonts.ready.then(() => {
+            loadBg(sources.photo);
+        });
+
+        function loadBg(src) {
+            bgImage.src = src;
+            bgImage.onload = () => {
+                // Initial auto-centering/scaling for a landscape image in portrait canvas
+                const canvasAspect = canvas.width / canvas.height;
+                const imgAspect = bgImage.width / bgImage.height;
+
+                if (imgAspect > canvasAspect) {
+                    // Image is wider than canvas height (landscape)
+                    scale = canvas.height / bgImage.height;
+                    // Center horizontal
+                    imgX = (canvas.width - bgImage.width * scale) / 2;
+                    imgY = 0;
+                } else {
+                    scale = canvas.width / bgImage.width;
+                    imgX = 0;
+                    imgY = (canvas.height - bgImage.height * scale) / 2;
+                }
+
+                // If user photo, nudge right to align the woman nicely on the right
+                if (src === sources.photo) {
+                    imgX = -190; // beautiful positioning right out of the box
+                }
+
+                updateUIFromState();
+                draw();
+            };
+        }
+
+        function selectImage(type) {
+            document.querySelectorAll('.image-thumb').forEach(t => t.classList.remove('active'));
+            document.getElementById(`thumb-${type}`).classList.add('active');
+            isRefSelected = (type === 'ref');
+            loadBg(sources[type]);
+        }
+
+        function updateUIFromState() {
+            document.getElementById('zoomRange').value = scale;
+            document.getElementById('zoomValue').textContent = scale.toFixed(2) + 'x';
+            
+            document.getElementById('posXRange').value = imgX;
+            document.getElementById('posXValue').textContent = Math.round(imgX) + 'px';
+            
+            document.getElementById('posYRange').value = imgY;
+            document.getElementById('posYValue').textContent = Math.round(imgY) + 'px';
+        }
+
+        // Draw Canvas
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 1. Draw Background Image
+            ctx.save();
+            ctx.drawImage(bgImage, imgX, imgY, bgImage.width * scale, bgImage.height * scale);
+            ctx.restore();
+
+            // 2. Add Left-side overlay gradient for readability (only if it's the actual photo, or overlay is on)
+            const overlayOpacity = parseFloat(document.getElementById('overlayRange').value);
+            if (overlayOpacity > 0) {
+                const overlayColorType = document.getElementById('overlayColor').value;
+                const grad = ctx.createLinearGradient(0, 0, canvas.width * 0.75, 0);
+                
+                // Deep Forest Green or Pure Black base
+                const rgbColor = overlayColorType === 'green' ? '4, 23, 17' : '0, 0, 0';
+                
+                grad.addColorStop(0, `rgba(${rgbColor}, ${overlayOpacity})`);
+                grad.addColorStop(0.35, `rgba(${rgbColor}, ${overlayOpacity * 0.85})`);
+                grad.addColorStop(0.7, `rgba(${rgbColor}, ${overlayOpacity * 0.45})`);
+                grad.addColorStop(1, `rgba(${rgbColor}, 0)`);
+                
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+
+            // 3. Render Main Text (Skorwider alignment: bold condensed left aligned)
+            const textX = parseInt(document.getElementById('textXRange').value);
+            const startTextY = parseInt(document.getElementById('textYRange').value);
+            const fontSize = parseInt(document.getElementById('fontSizeRange').value);
+            const lineHeightMultiplier = parseFloat(document.getElementById('lineHeightRange').value);
+            const mainTextContent = document.getElementById('mainText').value;
+
+            const lines = mainTextContent.split('\n');
+            let currentY = startTextY;
+
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'top';
+
+            lines.forEach((line) => {
+                // Parse markdown-like syntax: *text* for serif italic orange
+                const parts = parseFormattedLine(line);
+                let currentX = textX;
+
+                parts.forEach(part => {
+                    if (part.isFormatted) {
+                        ctx.font = `italic 700 ${fontSize * 1.05}px "Playfair Display", serif`;
+                        ctx.fillStyle = coralColor;
+                    } else {
+                        ctx.font = `900 ${fontSize}px "Montserrat", "Inter", sans-serif`;
+                        ctx.fillStyle = '#ffffff';
+                    }
+
+                    ctx.fillText(part.text, currentX, currentY);
+                    currentX += ctx.measureText(part.text).width;
+                });
+
+                currentY += fontSize * lineHeightMultiplier;
+            });
+
+            // 4. Render Bottom Info (Subtext & Brand)
+            const subTextContent = document.getElementById('subText').value;
+            const brandTextContent = document.getElementById('brandText').value;
+
+            // Safe Area bottom bounding box is 1215px (1350 - 135px bottom margin)
+            // Let's place the paragraph nicely around Y = 1020-1080 (fully inside safe area)
+            
+            // Render sub-paragraph
+            if (subTextContent) {
+                ctx.font = '700 28px "Inter", sans-serif';
+                ctx.fillStyle = coralColor;
+                
+                // Wrap text if needed
+                const maxParagraphWidth = 650;
+                const paragraphLines = wrapText(ctx, subTextContent, maxParagraphWidth);
+                
+                let paragraphY = 1000;
+                paragraphLines.forEach(pLine => {
+                    ctx.fillText(pLine, textX, paragraphY);
+                    paragraphY += 38;
+                });
+            }
+
+            // Render Skorwider Brand website at the very bottom of the safe area
+            if (brandTextContent) {
+                ctx.font = '700 20px "Inter", sans-serif';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.letterSpacing = '5px';
+                
+                // Center bottom inside the safe zone (Y = 1170 px)
+                ctx.textAlign = 'center';
+                ctx.fillText(brandTextContent.toUpperCase(), canvas.width / 2, 1170);
+                ctx.letterSpacing = '0px'; // reset
+            }
+
+            // 5. Draw 1:1 Instagram Feed safe zone boundary (only visible in editor)
+            const showSafeZone = document.getElementById('toggleGrid').checked;
+            if (showSafeZone) {
+                ctx.strokeStyle = '#ef4444';
+                ctx.lineWidth = 4;
+                ctx.setLineDash([15, 10]);
+                
+                // IG Grid is 1080x1080.
+                // 1350 - 1080 = 270 px total padding.
+                // So top crop line is at 135px, bottom crop line is at 1215px.
+                
+                // Top Crop Line
+                ctx.beginPath();
+                ctx.moveTo(0, 135);
+                ctx.lineTo(canvas.width, 135);
+                ctx.stroke();
+
+                // Bottom Crop Line
+                ctx.beginPath();
+                ctx.moveTo(0, 1215);
+                ctx.lineTo(canvas.width, 1215);
+                ctx.stroke();
+
+                // Draw translucent boxes outside safe zone
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+                ctx.fillRect(0, 0, canvas.width, 135);
+                ctx.fillRect(0, 1215, canvas.width, 135);
+
+                // Add label
+                ctx.setLineDash([]);
+                ctx.fillStyle = '#ef4444';
+                ctx.font = 'bold 20px "Inter", sans-serif';
+                ctx.textAlign = 'right';
+                ctx.fillText('NAGŁÓWEK / PODGLĄD IG UTNIE (GÓRA)', canvas.width - 20, 105);
+                ctx.fillText('NAGŁÓWEK / PODGLĄD IG UTNIE (DÓŁ)', canvas.width - 20, 1245);
+            }
+        }
+
+        // Helper to parse formatting (simple *italic serif* parser)
+        function parseFormattedLine(line) {
+            const parts = [];
+            const regex = /\*([^*]+)\*/g;
+            let lastIndex = 0;
+            let match;
+
+            while ((match = regex.exec(line)) !== null) {
+                // Add preceding plain text
+                if (match.index > lastIndex) {
+                    parts.push({
+                        text: line.substring(lastIndex, match.index),
+                        isFormatted: false
+                    });
+                }
+                // Add formatted part
+                parts.push({
+                    text: match[1],
+                    isFormatted: true
+                });
+                lastIndex = regex.lastIndex;
+            }
+
+            if (lastIndex < line.length) {
+                parts.push({
+                    text: line.substring(lastIndex),
+                    isFormatted: false
+                });
+            }
+
+            // Fallback for no styling
+            if (parts.length === 0) {
+                parts.push({ text: line, isFormatted: false });
+            }
+
+            return parts;
+        }
+
+        // Text wrapping helper
+        function wrapText(context, text, maxWidth) {
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                const word = words[i];
+                const width = context.measureText(currentLine + " " + word).width;
+                if (width < maxWidth) {
+                    currentLine += " " + word;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- Event Listeners for UI controls ---
+        const bindControl = (id, prop, valueId = null) => {
+            const el = document.getElementById(id);
+            el.addEventListener('input', (e) => {
+                if (valueId) {
+                    let suffix = '';
+                    if (id.includes('Range')) {
+                        if (id.includes('Height')) suffix = '';
+                        else if (id.includes('zoom')) suffix = 'x';
+                        else if (id.includes('overlay')) suffix = '%';
+                        else suffix = 'px';
+                    }
+                    
+                    let dispVal = e.target.value;
+                    if (id.includes('overlay')) dispVal = Math.round(dispVal * 100);
+                    document.getElementById(valueId).textContent = dispVal + suffix;
+                }
+                
+                // Apply update
+                if (id === 'zoomRange') scale = parseFloat(e.target.value);
+                else if (id === 'posXRange') imgX = parseInt(e.target.value);
+                else if (id === 'posYRange') imgY = parseInt(e.target.value);
+                
+                draw();
+            });
+        };
+
+        bindControl('zoomRange', 'scale', 'zoomValue');
+        bindControl('posXRange', 'imgX', 'posXValue');
+        bindControl('posYRange', 'imgY', 'posYValue');
+        bindControl('fontSizeRange', null, 'fontSizeValue');
+        bindControl('lineHeightRange', null, 'lineHeightValue');
+        bindControl('textYRange', null, 'textYValue');
+        bindControl('textXRange', null, 'textXValue');
+        bindControl('overlayRange', null, 'overlayValue');
+        
+        document.getElementById('overlayColor').addEventListener('change', draw);
+        document.getElementById('mainText').addEventListener('input', draw);
+        document.getElementById('subText').addEventListener('input', draw);
+        document.getElementById('brandText').addEventListener('input', draw);
+        document.getElementById('toggleGrid').addEventListener('change', draw);
+
+        // --- Drag and Drop to pan background image ---
+        canvas.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            const rect = canvas.getBoundingClientRect();
+            // Scale coordination between displayed canvas size and raw canvas pixels
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            
+            startX = e.clientX * scaleX - imgX;
+            startY = e.clientY * scaleY - imgY;
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+
+            imgX = e.clientX * scaleX - startX;
+            imgY = e.clientY * scaleY - startY;
+
+            updateUIFromState();
+            draw();
+        });
+
+        // Touch support
+        canvas.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) {
+                isDragging = true;
+                const rect = canvas.getBoundingClientRect();
+                const scaleX = canvas.width / rect.width;
+                const scaleY = canvas.height / rect.height;
+                startX = e.touches[0].clientX * scaleX - imgX;
+                startY = e.touches[0].clientY * scaleY - imgY;
+            }
+        });
+
+        canvas.addEventListener('touchmove', (e) => {
+            if (isDragging && e.touches.length === 1) {
+                const rect = canvas.getBoundingClientRect();
+                const scaleX = canvas.width / rect.width;
+                const scaleY = canvas.height / rect.height;
+                imgX = e.touches[0].clientX * scaleX - startX;
+                imgY = e.touches[0].clientY * scaleY - startY;
+                updateUIFromState();
+                draw();
+            }
+        });
+
+        canvas.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        // --- Export & Download ---
+        function downloadImage() {
+            // Temporarily hide safe zone lines for crisp high-quality output
+            const originalGridVal = document.getElementById('toggleGrid').checked;
+            document.getElementById('toggleGrid').checked = false;
+            draw();
+
+            // Export to high-res JPG
+            const link = document.createElement('a');
+            link.download = 'skorwider-ig-madrsc.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.95);
+            link.click();
+
+            // Restore safe zone checkbox state
+            document.getElementById('toggleGrid').checked = originalGridVal;
+            draw();
+        }
+    </script>
+</body>
+</html>
