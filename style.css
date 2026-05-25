@@ -94,28 +94,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
 .logo-box {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   border: 1.5px solid var(--white);
-  padding: 3px 4px;
+  padding: 4px 6px;
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.01em;
   line-height: 1;
   box-sizing: border-box;
 }
 .logo-sub {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 300;
   letter-spacing: 0.12em;
   text-transform: uppercase;
