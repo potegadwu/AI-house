@@ -164,8 +164,11 @@
       });
     }
 
+    const backBtn = $('#modalBackBtn');
+
     if (watchBtn) watchBtn.addEventListener('click', openModal);
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backBtn) backBtn.addEventListener('click', closeModal);
     if (backdrop) backdrop.addEventListener('click', closeModal);
 
     document.addEventListener('keydown', e => {
