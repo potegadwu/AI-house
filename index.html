@@ -9,6 +9,74 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css?v=8" />
+  <!-- SEO Video Schema.org Metadata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "VideoObject",
+        "name": "AI House Production Demo Reel 2024",
+        "description": "Oficjalne wideo demo AI House prezentujące zaawansowane możliwości generowania i postprodukcji wideo opartej na sztucznej inteligencji.",
+        "thumbnailUrl": [
+          "https://madeby.agency/ai-house/filmy-na-strone/thumbnails/ai-production-house-demo-reel.jpg"
+        ],
+        "uploadDate": "2024-09-22T08:00:00+02:00",
+        "contentUrl": "filmy na strone/ai-production-house-demo-reel.mp4",
+        "embedUrl": "https://madeby.agency/ai-house/",
+        "duration": "PT1M15S"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Reklama Social Media AI — AI House",
+        "description": "Przykład dynamicznej i wysoce konwertującej reklamy wideo stworzonej przy użyciu modeli sztucznej inteligencji dla social media.",
+        "thumbnailUrl": [
+          "https://madeby.agency/ai-house/filmy-na-strone/thumbnails/ai-social-media-video-ad.jpg"
+        ],
+        "uploadDate": "2024-09-22T08:00:00+02:00",
+        "contentUrl": "filmy na strone/ai-social-media-video-ad.mp4",
+        "embedUrl": "https://madeby.agency/ai-house/",
+        "duration": "PT0M30S"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Animacja Wyjaśniająca AI — AI House",
+        "description": "Krótkie i angażujące wideo objaśniające (explainer video) wyprodukowane za pomocą zautomatyzowanych narzędzi animacji AI.",
+        "thumbnailUrl": [
+          "https://madeby.agency/ai-house/filmy-na-strone/thumbnails/ai-explainer-short-video.jpg"
+        ],
+        "uploadDate": "2024-09-22T08:00:00+02:00",
+        "contentUrl": "filmy na strone/ai-explainer-short-video.mp4",
+        "embedUrl": "https://madeby.agency/ai-house/",
+        "duration": "PT0M35S"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Kreatywna Narracja Wizualna AI — AI House",
+        "description": "Prezentacja unikalnej tożsamości marki i storytellingu wizualnego napędzanego zaawansowaną sztuczną inteligencją.",
+        "thumbnailUrl": [
+          "https://madeby.agency/ai-house/filmy-na-strone/thumbnails/ai-creative-brand-storytelling.jpg"
+        ],
+        "uploadDate": "2024-09-22T08:00:00+02:00",
+        "contentUrl": "filmy na strone/ai-creative-brand-storytelling.mp4",
+        "embedUrl": "https://madeby.agency/ai-house/",
+        "duration": "PT0M25S"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Kinowy Teledysk AI — AI House",
+        "description": "Projekt wideo zrealizowany dla branży muzycznej przy użyciu algorytmów głębokiego uczenia i generatywnego wideo AI.",
+        "thumbnailUrl": [
+          "https://madeby.agency/ai-house/filmy-na-strone/thumbnails/ai-music-video-cinematic.jpg"
+        ],
+        "uploadDate": "2024-09-22T08:00:00+02:00",
+        "contentUrl": "filmy na strone/ai-music-video-cinematic.mp4",
+        "embedUrl": "https://madeby.agency/ai-house/",
+        "duration": "PT0M40S"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -37,7 +105,7 @@
   <!-- ============ HERO ============ -->
   <section id="hero" class="hero">
     <video id="heroVideo" autoplay muted loop playsinline preload="auto">
-      <source src="filmy na strone/reel-demo.mp4" type="video/mp4" />
+      <source src="filmy na strone/ai-production-house-demo-reel.mp4" type="video/mp4" />
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -49,7 +117,7 @@
       </h1>
       <p class="hero-sub" data-pl="Wideo z AI. Szybciej. Piękniej. Skuteczniej." data-en="AI-powered video. Faster. More beautiful. More effective."></p>
       <div class="hero-actions">
-        <button class="btn-primary" id="watchReelBtn" data-pl="↓ Zobacz demo reel" data-en="↓ Watch demo reel"></button>
+        <button class="btn-primary" id="watchReelBtn" data-pl="↓ Zobacz wideo" data-en="↓ Watch video"></button>
         <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-pl="Porozmawiajmy" data-en="Let's talk"></button>
       </div>
     </div>
@@ -63,9 +131,60 @@
     <div class="modal-backdrop" id="modalBackdrop"></div>
     <div class="modal-content">
       <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <video id="modalVideo" controls playsinline>
-        <source src="filmy na strone/reel-demo.mp4" type="video/mp4" />
-      </video>
+      <div class="modal-player-container">
+        <video id="modalVideo" controls playsinline>
+          <source src="filmy na strone/ai-production-house-demo-reel.mp4" type="video/mp4" />
+        </video>
+        
+        <div class="modal-thumbnails-title" data-pl="Wybierz wideo do obejrzenia" data-en="Select video to watch">Wybierz wideo do obejrzenia</div>
+        <div class="modal-thumbnails-grid">
+          <div class="modal-thumb active" data-src="filmy na strone/ai-production-house-demo-reel.mp4">
+            <video class="modal-thumb-video" src="filmy na strone/ai-production-house-demo-reel.mp4" preload="metadata" muted playsinline></video>
+            <div class="modal-thumb-overlay">
+              <span class="play-icon">▶</span>
+            </div>
+            <div class="modal-thumb-info">
+              <span class="modal-thumb-name" data-pl="Demo Reel 2024" data-en="Demo Reel 2024">Demo Reel 2024</span>
+            </div>
+          </div>
+          <div class="modal-thumb" data-src="filmy na strone/ai-social-media-video-ad.mp4">
+            <video class="modal-thumb-video" src="filmy na strone/ai-social-media-video-ad.mp4" preload="metadata" muted playsinline></video>
+            <div class="modal-thumb-overlay">
+              <span class="play-icon">▶</span>
+            </div>
+            <div class="modal-thumb-info">
+              <span class="modal-thumb-name" data-pl="Reklama Social Media AI" data-en="Social Media AI Ad">Reklama Social Media AI</span>
+            </div>
+          </div>
+          <div class="modal-thumb" data-src="filmy na strone/ai-explainer-short-video.mp4">
+            <video class="modal-thumb-video" src="filmy na strone/ai-explainer-short-video.mp4" preload="metadata" muted playsinline></video>
+            <div class="modal-thumb-overlay">
+              <span class="play-icon">▶</span>
+            </div>
+            <div class="modal-thumb-info">
+              <span class="modal-thumb-name" data-pl="Wideo Wyjaśniające AI" data-en="AI Explainer Video">Wideo Wyjaśniające AI</span>
+            </div>
+          </div>
+          <div class="modal-thumb" data-src="filmy na strone/ai-creative-brand-storytelling.mp4">
+            <video class="modal-thumb-video" src="filmy na strone/ai-creative-brand-storytelling.mp4" preload="metadata" muted playsinline></video>
+            <div class="modal-thumb-overlay">
+              <span class="play-icon">▶</span>
+            </div>
+            <div class="modal-thumb-info">
+              <span class="modal-thumb-name" data-pl="Narracja Wizualna AI" data-en="AI Visual Storytelling">Narracja Wizualna AI</span>
+            </div>
+          </div>
+          <div class="modal-thumb" data-src="filmy na strone/ai-music-video-cinematic.mp4">
+            <video class="modal-thumb-video" src="filmy na strone/ai-music-video-cinematic.mp4" preload="metadata" muted playsinline></video>
+            <div class="modal-thumb-overlay">
+              <span class="play-icon">▶</span>
+            </div>
+            <div class="modal-thumb-info">
+              <span class="modal-thumb-name" data-pl="Kinowy Teledysk AI" data-en="AI Cinematic Music Video">Kinowy Teledysk AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

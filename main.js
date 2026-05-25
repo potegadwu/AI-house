@@ -137,6 +137,7 @@
     const closeBtn = $('#modalClose');
     const watchBtn = $('#watchReelBtn');
     const modalVideo = $('#modalVideo');
+    const thumbs = $$('.modal-thumb');
     if (!modal) return;
 
     function openModal() {
@@ -153,8 +154,13 @@
       document.body.style.overflow = '';
       if (modalVideo) {
         modalVideo.pause();
+        modalVideo.src = 'filmy na strone/ai-production-house-demo-reel.mp4';
         modalVideo.currentTime = 0;
       }
+      thumbs.forEach((t, idx) => {
+        if (idx === 0) t.classList.add('active');
+        else t.classList.remove('active');
+      });
     }
 
     if (watchBtn) watchBtn.addEventListener('click', openModal);
@@ -163,6 +169,32 @@
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeModal();
+    });
+
+    // Thumbnails logic (hover to play preview, click to select video)
+    thumbs.forEach(thumb => {
+      const thumbVideo = thumb.querySelector('.modal-thumb-video');
+      
+      if (thumbVideo) {
+        thumb.addEventListener('mouseenter', () => {
+          thumbVideo.play().catch(() => {});
+        });
+        thumb.addEventListener('mouseleave', () => {
+          thumbVideo.pause();
+          thumbVideo.currentTime = 0;
+        });
+      }
+
+      thumb.addEventListener('click', () => {
+        const src = thumb.getAttribute('data-src');
+        if (modalVideo && src) {
+          modalVideo.src = src;
+          modalVideo.currentTime = 0;
+          modalVideo.play().catch(() => {});
+        }
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
     });
   }
 
