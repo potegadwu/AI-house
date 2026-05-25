@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
 
@@ -454,6 +454,37 @@
   <!-- BACK TO TOP -->
   <button id="backToTop" class="back-to-top" aria-label="Wróć na górę">↑</button>
 
-  <script src="main.js"></script>
+  <!-- ============ BLOG READER OVERLAY ============ -->
+  <div id="blogReaderModal" class="blog-reader" role="dialog" aria-modal="true">
+    <div class="blog-reader-progress" id="blogReaderProgress"></div>
+    <div class="blog-reader-header">
+      <div class="container blog-reader-nav-container">
+        <button class="blog-reader-close" id="blogReaderClose" aria-label="Wróć do bloga">
+          <span>✕</span> <span data-pl="Wróć do bloga" data-en="Back to Blog">Wróć do bloga</span>
+        </button>
+      </div>
+    </div>
+    <div class="blog-reader-content-wrap">
+      <div class="container blog-reader-container">
+        <article class="blog-reader-article">
+          <div class="blog-reader-meta">
+            <span class="blog-reader-cat" id="blogReaderCat"></span>
+            <span class="blog-reader-sep">•</span>
+            <span class="blog-reader-time" id="blogReaderTime"></span>
+          </div>
+          <h1 class="blog-reader-title" id="blogReaderTitle"></h1>
+          <div class="blog-reader-body" id="blogReaderBody"></div>
+        </article>
+        
+        <aside class="blog-reader-sidebar">
+          <h3 class="sidebar-title" data-pl="Inne artykuły" data-en="Other Articles">Inne artykuły</h3>
+          <div class="blog-reader-related" id="blogReaderRelated"></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="blog-data.js?v=3"></script>
+  <script src="main.js?v=3"></script>
 </body>
 </html>

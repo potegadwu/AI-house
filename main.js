@@ -440,6 +440,108 @@
 
     sections.forEach(s => observer.observe(s));
   }
+  /* ============================================
+     BLOG READER OVERLAY (Direct from BLOG_DATA)
+     ============================================ */
+  const parsedArticles = typeof BLOG_DATA !== 'undefined' ? BLOG_DATA : [];
+
+  function initBlogReader() {
+    const reader = $('#blogReaderModal');
+    const closeBtn = $('#blogReaderClose');
+    const contentWrap = $('.blog-reader-content-wrap');
+    const progressBar = $('#blogReaderProgress');
+    const cards = $$('.blog-card');
+
+    if (!reader) return;
+
+    // Setup reader progress bar tracking
+    if (contentWrap && progressBar) {
+      contentWrap.addEventListener('scroll', () => {
+        const scrollHeight = contentWrap.scrollHeight - contentWrap.clientHeight;
+        if (scrollHeight > 0) {
+          const pct = (contentWrap.scrollTop / scrollHeight) * 100;
+          progressBar.style.width = pct + '%';
+        }
+      });
+    }
+
+    function openArticle(index) {
+      if (!parsedArticles[index]) return;
+      const art = parsedArticles[index];
+      const card = cards[index];
+
+      // Grab dynamic category and read time based on language from card
+      const categoryTag = card ? card.querySelector('.blog-cat-tag') : null;
+      const metaSpan = card ? card.querySelector('.blog-meta span:last-child') : null;
+      
+      const catText = categoryTag ? categoryTag.textContent : art.category;
+      const timeText = metaSpan ? metaSpan.textContent : '5 min read';
+
+      // Set fields
+      $('#blogReaderCat').textContent = catText;
+      $('#blogReaderTime').textContent = timeText;
+      $('#blogReaderTitle').textContent = card ? card.querySelector('.blog-title').textContent : art.title;
+      $('#blogReaderBody').innerHTML = art.bodyHtml;
+
+      // Populate related articles sidebar
+      const relatedContainer = $('#blogReaderRelated');
+      if (relatedContainer) {
+        relatedContainer.innerHTML = '';
+        
+        // Show other articles
+        parsedArticles.forEach((otherArt, otherIdx) => {
+          if (otherIdx === index) return; // skip active
+
+          const otherCard = cards[otherIdx];
+          if (!otherCard) return; // absolute safeguard!
+
+          const otherTitle = otherCard.querySelector('.blog-title') ? otherCard.querySelector('.blog-title').textContent : otherArt.title;
+          const otherCatText = otherCard.querySelector('.blog-cat-tag') ? otherCard.querySelector('.blog-cat-tag').textContent : otherArt.category;
+
+          const relatedCard = document.createElement('div');
+          relatedCard.className = 'related-card';
+          relatedCard.innerHTML = `
+            <span class="related-cat">${otherCatText}</span>
+            <span class="related-title">${otherTitle}</span>
+          `;
+
+          relatedCard.addEventListener('click', () => {
+            openArticle(otherIdx);
+            if (contentWrap) contentWrap.scrollTop = 0;
+          });
+
+          relatedContainer.appendChild(relatedCard);
+        });
+      }
+
+      // Open reader with premium animation
+      reader.classList.add('open');
+      document.body.classList.add('reader-open');
+      if (contentWrap) contentWrap.scrollTop = 0;
+      if (progressBar) progressBar.style.width = '0%';
+    }
+
+    function closeReader() {
+      reader.classList.remove('open');
+      document.body.classList.remove('reader-open');
+    }
+
+    // Attach click events to blog cards
+    cards.forEach((card, idx) => {
+      card.addEventListener('click', () => {
+        openArticle(idx);
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeReader);
+
+    // Escape key support
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && reader.classList.contains('open')) {
+        closeReader();
+      }
+    });
+  }
 
   /* ============================================
      INIT ALL
@@ -453,6 +555,7 @@
     initCounters();
     initBars();
     initBlogFilter();
+    initBlogReader();
     initContactForm();
     initHeroVideo();
     initSmoothScroll();
