@@ -155,6 +155,7 @@
       if (modalVideo) {
         modalVideo.pause();
         modalVideo.src = 'filmy na strone/ai-production-house-demo-reel.mp4';
+        modalVideo.load();
         modalVideo.currentTime = 0;
       }
       thumbs.forEach((t, idx) => {
@@ -189,6 +190,7 @@
         const src = thumb.getAttribute('data-src');
         if (modalVideo && src) {
           modalVideo.src = src;
+          modalVideo.load();
           modalVideo.currentTime = 0;
           modalVideo.play().catch(() => {});
         }
