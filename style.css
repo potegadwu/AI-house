@@ -1082,7 +1082,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   box-shadow: 0 8px 32px rgba(232,80,10,0.5);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .container { padding: 0 24px; }
   .section { padding: 80px 0; }
 
@@ -1090,17 +1090,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .nav-cta { display: none; }
   .hamburger { display: flex; }
 
+  /* Keep logo and menu button on top of overlay */
+  .nav-logo, .nav-right {
+    position: relative;
+    z-index: 2000;
+  }
+
   /* Mobile nav overlay */
   .nav-links.mobile-open {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: var(--nav-h); left: 0; right: 0; bottom: 0;
-    background: rgba(8,8,8,0.97);
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--black); /* solid background to prevent overlaps! */
     align-items: center;
     justify-content: center;
     gap: 40px;
-    z-index: 999;
+    z-index: 1900;
+    padding-top: 80px;
   }
   .nav-links.mobile-open a {
     font-size: 20px;
