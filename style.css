@@ -254,14 +254,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero-title {
   font-family: var(--font-sans);
-  font-size: clamp(52px, 8vw, 110px);
+  font-size: clamp(42px, 6.5vw, 85px);
   font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin-bottom: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 12px;
 }
 
 .hero-line-1 {
@@ -280,21 +280,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   animation: fadeUp 0.9s 0.5s forwards;
   display: block;
 }
-.hero-line-3 {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 0.9s 0.65s forwards;
-  display: block;
-}
 
 .hero-sub {
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-size: clamp(16px, 2vw, 24px);
   font-weight: 300;
-  color: rgba(250,250,250,0.75);
-  letter-spacing: 0.02em;
+  color: rgba(250,250,250,0.85);
+  letter-spacing: 0.05em;
   margin-bottom: 44px;
   opacity: 0;
-  animation: fadeUp 0.9s 0.8s forwards;
+  animation: fadeUp 0.9s 0.65s forwards; /* adjusted delay */
 }
 
 .hero-actions {
