@@ -186,26 +186,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav-cta.nav-whatsapp-only {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: 12px; /* squircle style exactly as in the photo */
   padding: 0;
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  border-color: rgba(37, 211, 102, 0.3);
-  color: #25D366;
-  background: rgba(37, 211, 102, 0.05);
-  box-shadow: 0 0 10px rgba(37, 211, 102, 0.1);
+  border: none !important;
+  color: #ffffff !important;
+  background: #25D366 !important; /* solid WhatsApp green */
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transition: all var(--transition);
 }
 .nav-cta.nav-whatsapp-only:hover {
-  background: #25D366;
-  border-color: #25D366;
-  color: #fff;
-  box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+  background: #20ba56 !important; /* slightly darker green on hover */
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+  transform: translateY(-1px);
 }
 .nav-cta.nav-whatsapp-only svg {
-  width: 22px !important;
-  height: 22px !important;
+  width: 25px !important;
+  height: 25px !important;
   margin: 0 !important;
+  fill: #ffffff !important;
 }
 
 
