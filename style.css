@@ -1705,48 +1705,47 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    MADEby.agency BANNER
    ============================================ */
 .madeby-banner {
-  background: #F8F8F5;
-  color: #111111;
-  padding: 100px 0;
-  text-align: center;
-  border-top: 1px solid #E5E5E0;
+  background: var(--black-2);
+  padding: 80px 0;
+  border-top: 1px solid var(--grey-3);
 }
-.madeby-banner .section-tag {
-  color: #555555;
-  border-color: #555555;
-  margin-bottom: 32px;
+.madeby-banner-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  align-items: center;
 }
-.madeby-banner .section-title {
-  font-family: var(--font-serif);
-  color: #080808;
-  font-size: clamp(32px, 5vw, 56px);
-  max-width: 900px;
-  margin: 0 auto 32px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+.madeby-banner-image {
+  width: 100%;
+  border-radius: 4px;
+  filter: grayscale(0%);
+  object-fit: cover;
+}
+.madeby-banner-content {
+  text-align: left;
+}
+.madeby-banner-content .section-tag {
+  margin-bottom: 24px;
+}
+.madeby-banner-content .section-title {
+  font-family: var(--font-sans);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
 }
 .madeby-banner-text {
-  max-width: 760px;
-  margin: 0 auto 48px;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.8;
-  color: #444444;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--grey-1);
+  margin-bottom: 40px;
 }
-.madeby-banner-text strong {
-  font-weight: 700;
-  color: #080808;
-}
-.madeby-banner .btn-primary {
-  background: #080808;
-  color: #FAFAFA;
-  display: inline-block;
-}
-.madeby-banner .btn-primary:hover {
-  background: #333333;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-  transform: translateY(-2px);
-}
-.madeby-banner .btn-primary::before {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+@media (max-width: 1024px) {
+  .madeby-banner-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
