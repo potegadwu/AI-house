@@ -1701,5 +1701,52 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 
-
-
+/* ============================================
+   MADEby.agency BANNER
+   ============================================ */
+.madeby-banner {
+  background: #F8F8F5;
+  color: #111111;
+  padding: 100px 0;
+  text-align: center;
+  border-top: 1px solid #E5E5E0;
+}
+.madeby-banner .section-tag {
+  color: #555555;
+  border-color: #555555;
+  margin-bottom: 32px;
+}
+.madeby-banner .section-title {
+  font-family: var(--font-serif);
+  color: #080808;
+  font-size: clamp(32px, 5vw, 56px);
+  max-width: 900px;
+  margin: 0 auto 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.madeby-banner-text {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #444444;
+}
+.madeby-banner-text strong {
+  font-weight: 700;
+  color: #080808;
+}
+.madeby-banner .btn-primary {
+  background: #080808;
+  color: #FAFAFA;
+  display: inline-block;
+}
+.madeby-banner .btn-primary:hover {
+  background: #333333;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+.madeby-banner .btn-primary::before {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
