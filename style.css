@@ -1213,6 +1213,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-content { padding: 0 20px 80px; }
   .services-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
+  .founders-grid { grid-template-columns: 1fr; }
+  .founder-card { padding: 40px 24px; }
   .stats-big { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .btn-primary, .btn-ghost { width: 100%; text-align: center; }
