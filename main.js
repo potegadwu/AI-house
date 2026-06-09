@@ -144,6 +144,7 @@
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
       if (modalVideo) {
+        modalVideo.muted = true; // start muted initially so user can unmute manually
         modalVideo.currentTime = 0;
         modalVideo.play().catch(() => {});
       }
