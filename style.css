@@ -398,7 +398,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .modal {
   position: fixed;
   inset: 0;
-  z-index: 2000;
+  z-index: 4000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1185,6 +1185,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     background: #080808 !important;
     border-bottom: 1px solid rgba(232, 80, 10, 0.15) !important;
     padding: 0 24px !important;
+    z-index: 3000 !important;
   }
   .logo-box {
     width: 50px !important;
@@ -1230,7 +1231,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     flex-direction: column;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--black); /* solid background to prevent overlaps! */
+    background: #080808 !important; /* solid background to prevent overlaps! */
     align-items: center;
     justify-content: center;
     gap: 40px;
