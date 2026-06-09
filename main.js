@@ -393,8 +393,8 @@
     const submitBtn = $('#formSubmitBtn');
     if (!form) return;
 
-    /* Set proper Formspree endpoint */
-    form.action = 'https://formspree.io/f/malgorzata@madeby.agency';
+    /* Set proper FormSubmit endpoint */
+    form.action = 'https://formsubmit.co/ajax/malgorzata@madeby.agency';
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
