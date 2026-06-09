@@ -1178,6 +1178,40 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .container { padding: 0 24px; }
   .section { padding: 80px 0; }
 
+  #navbar {
+    height: 80px !important;
+    background: #080808 !important;
+    border-bottom: 1px solid rgba(232, 80, 10, 0.15) !important;
+    padding: 0 24px !important;
+  }
+  .logo-box {
+    width: 50px !important;
+    height: 50px !important;
+    padding: 4px 6px !important;
+    font-size: 9px !important;
+  }
+  .logo-sub {
+    font-size: 14px !important;
+  }
+  .nav-logo {
+    gap: 4px !important;
+  }
+  .lang-btn {
+    font-size: 12px !important;
+  }
+  .nav-cta.nav-whatsapp-only {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 10px !important;
+  }
+  .nav-cta.nav-whatsapp-only svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .hamburger span {
+    width: 20px !important;
+  }
+
   .nav-links { display: none; }
   .nav-cta { display: none; }
   .hamburger { display: flex; }
