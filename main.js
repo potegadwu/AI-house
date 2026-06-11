@@ -203,10 +203,14 @@
       const thumbVideo = thumb.querySelector('.modal-thumb-video');
       
       if (thumbVideo) {
+        let playTimeout;
         thumb.addEventListener('mouseenter', () => {
-          thumbVideo.play().catch(() => {});
+          playTimeout = setTimeout(() => {
+            thumbVideo.play().catch(() => {});
+          }, 200);
         });
         thumb.addEventListener('mouseleave', () => {
+          clearTimeout(playTimeout);
           thumbVideo.pause();
           thumbVideo.currentTime = 0;
         });
