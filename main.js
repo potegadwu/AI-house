@@ -145,7 +145,6 @@
       document.body.style.overflow = 'hidden';
       if (modalVideo) {
         modalVideo.muted = true; // start muted initially so user can unmute manually
-        modalVideo.currentTime = 0;
         modalVideo.play().catch(() => {});
       }
     }
@@ -163,9 +162,14 @@
         if (idx === 0) t.classList.add('active');
         else t.classList.remove('active');
       });
+      // Clear hash on close
+      if (window.location.hash.startsWith('#video=')) {
+        history.pushState(null, null, window.location.pathname + window.location.search);
+      }
     }
 
     const backBtn = $('#modalBackBtn');
+    const navRealizacjeBtn = $('#navRealizacje');
 
     function playNextVideo() {
       let activeIdx = -1;
@@ -180,6 +184,12 @@
     }
 
     if (watchBtn) watchBtn.addEventListener('click', openModal);
+    if (navRealizacjeBtn) {
+      navRealizacjeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
+    }
     if (closeBtn) closeBtn.addEventListener('click', playNextVideo);
     if (backBtn) backBtn.addEventListener('click', closeModal);
     if (backdrop) backdrop.addEventListener('click', closeModal);
@@ -209,11 +219,40 @@
           modalVideo.load();
           modalVideo.currentTime = 0;
           modalVideo.play().catch(() => {});
+          
+          // Update URL hash
+          const filename = src.split('/').pop().replace('.mp4', '');
+          history.replaceState(null, null, '#video=' + encodeURIComponent(filename));
         }
         thumbs.forEach(t => t.classList.remove('active'));
         thumb.classList.add('active');
       });
     });
+
+    // Handle load hash
+    function checkHash() {
+      const hash = window.location.hash;
+      if (hash.startsWith('#video=')) {
+        const videoName = decodeURIComponent(hash.replace('#video=', ''));
+        const targetSrc = `filmy na strone/${videoName}.mp4`;
+        let found = false;
+        thumbs.forEach(t => {
+          if (t.getAttribute('data-src') === targetSrc) {
+            t.click();
+            found = true;
+          }
+        });
+        if (found && !modal.classList.contains('open')) {
+          openModal();
+        }
+      } else if (hash === '#realizacje' && !modal.classList.contains('open')) {
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+        openModal();
+      }
+    }
+    
+    // Check hash initially
+    setTimeout(checkHash, 100);
   }
 
   /* ============================================

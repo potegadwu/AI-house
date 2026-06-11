@@ -191,20 +191,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  border: none !important;
+  border: 1px solid rgba(255,255,255,0.25) !important;
   color: #ffffff !important;
-  background: #25D366 !important; /* solid WhatsApp green */
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  background: transparent !important;
+  box-shadow: none;
   transition: all var(--transition);
 }
 .nav-cta.nav-whatsapp-only:hover {
-  background: #20ba56 !important; /* slightly darker green on hover */
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+  background: rgba(255,255,255,0.1) !important;
+  box-shadow: none;
   transform: translateY(-1px);
 }
 .nav-cta.nav-whatsapp-only svg {
-  width: 25px !important;
-  height: 25px !important;
+  width: 20px !important;
+  height: 20px !important;
   margin: 0 !important;
   fill: #ffffff !important;
 }
@@ -1212,8 +1212,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     border-radius: 10px !important;
   }
   .nav-cta.nav-whatsapp-only svg {
-    width: 20px !important;
-    height: 20px !important;
+    width: 18px !important;
+    height: 18px !important;
   }
   .hamburger span {
     width: 20px !important;
