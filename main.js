@@ -59,14 +59,26 @@
   }
 
   function initLang() {
-    const saved = localStorage.getItem('aihouse-lang');
-    const lang = saved || 'pl';
+    const isEn = window.location.pathname.includes('/en/');
+    const lang = isEn ? 'en' : 'pl';
+    
+    // HTML is mostly pre-populated statically by the build script, but applying it covers JS-based dynamic inputs.
     applyLang(lang);
 
     const langBtn = $('#langToggle');
     if (langBtn) {
+      langBtn.textContent = isEn ? 'PL' : 'EN';
       langBtn.addEventListener('click', () => {
-        applyLang(currentLang === 'pl' ? 'en' : 'pl');
+        const currentUrl = window.location.href;
+        if (isEn) {
+           // Redirect to PL
+           window.location.href = currentUrl.replace('/en/', '/');
+        } else {
+           // Redirect to EN
+           const path = window.location.pathname;
+           const newPath = path.endsWith('/') ? '/en/index.html' : '/en' + path.substring(path.lastIndexOf('/'));
+           window.location.href = window.location.origin + newPath;
+        }
       });
     }
   }
