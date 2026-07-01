@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Cover Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #F15A24;
+    --pink: #E82B8C;
+    --bg-dark: #0f172a;
+  }
+  body {
+    background: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+    max-width: 1128px; /* LinkedIn standard width */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  /* COVER PHOTO CONTAINER (Aspect ratio roughly 4:1) */
+  .cover {
+    width: 100%;
+    height: 282px; /* 1128 / 4 = 282 */
+    position: relative;
+    background-color: var(--bg-dark);
+    /* Premium office background placeholder */
+    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Gradient Overlay using Brand Colors */
+  .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Subtle dark gradient to left, brand colors to right */
+    background: linear-gradient(90deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.6) 40%, rgba(232,43,140,0.7) 100%);
+  }
+
+  /* TEXT CONTAINER - Right aligned */
+  .text-content {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    text-align: right;
+    color: white;
+    max-width: 650px;
+    z-index: 2;
+  }
+
+  .quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+
+  .quote span {
+    color: var(--orange);
+    font-style: italic;
+  }
+
+  .brand-link {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--orange);
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin-right: 12px;
+    box-shadow: 0 4px 10px rgba(241, 90, 36, 0.4);
+  }
+
+  .blog-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #e2e8f0;
+    letter-spacing: 0.05em;
+  }
+
+  /* PROFILE MOCKUP (To show safe zones) */
+  .profile-section {
+    position: relative;
+    padding: 20px 24px 40px;
+    background: white;
+  }
+
+  .profile-pic {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: #cbd5e1;
+    background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop');
+    background-size: cover;
+    position: absolute;
+    top: -110px; /* Overlaps the cover */
+    left: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+
+  .profile-info {
+    margin-top: 50px;
+  }
+  .name { font-size: 24px; font-weight: 700; color: #1e293b; margin: 0; }
+  .headline { font-size: 16px; color: #475569; margin: 4px 0 0 0; }
+
+  /* CONTROLS */
+  .controls {
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1128px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+  .controls h3 { margin-top:0; font-size: 16px; color: #334155; }
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #334155;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: 0.2s;
+  }
+  .btn:hover { background: #475569; }
+</style>
+</head>
+<body>
+
+<div class="container" id="li-preview">
+  <!-- COVER AREA -->
+  <div class="cover" id="coverBg">
+    <div class="overlay" id="coverOverlay"></div>
+    
+    <div class="text-content">
+      <div class="quote" id="coverQuote">
+        Strategia to nie procedury.<br>
+        To odwaga zatrudniania <span>mądrzejszych od siebie.</span>
+      </div>
+      <div>
+        <span class="brand-link">skorwider.pl</span>
+        <span class="blog-link">/blog</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFILE AREA (SAFE ZONE DISPLAY) -->
+  <div class="profile-section">
+    <div class="profile-pic"></div>
+    <div class="profile-info">
+      <h1 class="name">Gosia Skorwider <svg width="16" height="16" viewBox="0 0 24 24" fill="#0f172a" style="vertical-align: middle;"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.2 14.8L6 12l1.4-1.4 3.4 3.4 5.8-5.8L18 9.6l-7.2 7.2z"/></svg></h1>
+      <p class="headline">Pharma Marketing & Real Estate | Automatyzacja & AI | Interim Manager</p>
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <h3>Przetestuj układ i kolory (symulacja)</h3>
+  <button class="btn" onclick="setGradient('rgba(232,43,140,0.7)', 'rgba(241,90,36,0.6)')">Wersja Różowo-Pomarańczowa</button>
+  <button class="btn" onclick="setGradient('rgba(15,23,42,0.9)', 'rgba(241,90,36,0.8)')">Wersja Ciemna + Pomarańcz</button>
+  <button class="btn" onclick="setGradient('rgba(15,23,42,0.9)', 'rgba(232,43,140,0.8)')">Wersja Ciemna + Róż</button>
+</div>
+
+<script>
+  function setGradient(color1, color2) {
+    const overlay = document.getElementById('coverOverlay');
+    overlay.style.background = `linear-gradient(90deg, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.5) 40%, ${color1} 70%, ${color2} 100%)`;
+  }
+</script>
+
+</body>
+</html>

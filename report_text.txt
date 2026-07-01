@@ -1,0 +1,373 @@
+
+
+
+
+RAPORT STRATEGICZNY B2B
+
+Transformacja Rynku Produkcji Wideo
+i Marketingu w Erze Generatywnej
+Sztucznej Inteligencji
+2025 – 2026
+
+
+
+Opracowanie:
+MADEby.agency / AI House Think-Tank
+Małgorzata Skorwider  |  Michał Kobierzewski
+
+Dokument analityczny przeznaczony dla:
+Zarządów (C-Level), Dyrektorów Marketingu (CMO),
+Dyrektorów HR (CHRO)
+Warszawa, czerwiec 2026
+
+Agenda Raportu Strategicznego
+1.  Wstęp: Makroekonomiczna zmiana paradygmatu w obszarze wideo i logistyki
+2.  Analiza Danych – Rynek Globalny: Skala inwestycji i prognozy finansowe 2025-2030
+3.  Analiza Danych – Rynek Polski: Wartość, tempo adopcji i struktura wydatków
+4.  Kryzys Kompetencyjny w Działach HR: Luka umiejętności AI, SaaS Bloat i dwutorowy rynek pracy
+5.  Analiza Linii Frontu: 15 Case Studies – Triumfy, porażki i skandale (Cannes Lions 2024-2026)
+6.  Paraliż Decyzyjny Organizacji: Wpływ przestarzałych Brand Manuali na hamowanie innowacji
+7.  Ekonomia Produkcji Premium: Dlaczego profesjonalne wdrażanie AI optymalizuje koszty jakościowe?
+8.  Rozwiązania i Rekomendacje: Model współpracy z Think-Tankiem AI House
+9.  Przyszłość: Prognozy na najbliższe 10 lat i rola ludzi w erze maszyn
+10.  Załącznik Analityczny: Synteza kluczowych raportów rynkowych
+
+1. Wstęp: Makroekonomiczna zmiana paradygmatu
+Globalny rynek produkcji treści wideo oraz komunikacji marketingowej przechodzi transformację o niespotykanej dotąd skali. To, co w latach 2022-2023 traktowano jako technologiczny eksperyment, dziś definiuje strategie biznesowe największych holdingów reklamowych i korporacji o zasięgu globalnym. Według analiz makroekonomicznych, kluczowym katalizatorem zysków w nowej "ekonomii kreatywnej" (szacowanej na 480 miliardów dolarów do 2027 roku) jest drastyczna redukcja kosztów operacyjnych i logistycznych na rzecz zwiększenia inwestycji w technologię i jakość ostatecznego obrazu.
+Kluczowym problemem tradycyjnej produkcji filmowej jest dysproporcja alokacji kapitału: do 60% budżetów reklamowych wideo pochłania logistyka (scouting lokacji, hotele, ubezpieczenia, katering, budowa planów zdjęciowych, wynajem sprzętu). Zastosowanie generatywnej sztucznej inteligencji pozwala organizacjom na redystrybucję tych środków, przenosząc 100% wartości inwestycji bezpośrednio na ekran.
+"Zrozumiałem, że nigdy więcej nie będę musiał jechać w lokację, by kręcić zdjęcia. Nie muszę budować planów. To zmieni każdy zakątek naszej branży i zdemokratyzuje koszty dla największych graczy."
+— Tyler Perry, Reżyser i Przedsiębiorca (The Hollywood Reporter, luty 2024)
+Tyler Perry, amerykański miliarder i reżyser, wstrzymał w lutym 2024 roku rozbudowę własnego studia filmowego (inwestycję wycenianą na 800 milionów dolarów) po prezentacji możliwości technologicznych modelu Sora. Ta decyzja stała się symbolicznym punktem zwrotnym dla całej branży rozrywkowej i reklamowej.
+Raport ten przedstawia kompleksową analizę rynku, identyfikując kluczowe trendy, zagrożenia i możliwości dla organizacji planujących wdrożenie technologii AI w produkcjach reklamowych. Opiera się na danych z najnowszych raportów branżowych (Wyzowl, McKinsey, HubSpot, IAB Polska, Jasper, PwC, WEF), analizach finansowych największych holdingów reklamowych oraz empirycznych case studies z lat 2024-2026.
+Niniejszy raport został opracowany przez zespół THINK-TANKU AI House, działającego w ramach MADEby.agency — domu produkcyjnego specjalizującego się w profesjonalnych produkcjach wykorzystujących generatywną sztuczną inteligencję z zachowaniem najwyższych standardów jakości Premium i Brand Safety.
+
+2. Analiza Danych – Rynek Globalny
+Ściana Danych Makro: Skala transformacji
+Transformacja nie opiera się na przypuszczeniach, lecz na twardych danych finansowych. Globalne sieci reklamowe (WPP, Publicis, Omnicom) dekonstruują klasyczne modele domów produkcyjnych, inwestując kapitał w centralizację procesów wewnątrz własnych ekosystemów AI.
+2.1. Wartość globalnego rynku AI w wideo
+Rynek globalny AI w produkcji wideo przechodzi eksplozję wzrostu. Według badań Fortune Business Insights, globalny rynek generatorów wideo AI wart był 716,8 mln USD w 2025 roku i ma wzrosnąć do 3.350 mln USD do 2034 roku, osiągając CAGR na poziomie 18,8%. Z kolei raport Grand View Research wycenia rynek na 788,5 mln USD w 2025 z projekcją 3.441,6 mln USD do 2033 (CAGR 20,3%). Najbardziej agresywna projekcja (Market.us) wskazuje na rynek wart 11,2 mld USD w 2024 z potencjałem do 246 mld USD do 2034 (CAGR 36,2%).
+  KLUCZOWE DANE FINANSOWE (2025-2026)
+• Rynek AI wideo globalnie: 716-788 mln USD (2025) → 946 mln-3,35 mld USD (2026-2034)
+• CAGR: 18,8%-36,2% (w zależności od źródła i zakresu definicji rynku)
+• Wydatki globalne na reklamę: 1,3 bln USD w 2026 (projekcja WPP Media)
+• AI search: z 5,1 mld USD (2026) do 32 mld USD (2031) — 39,2% rynku wyszukiwania
+• Rynek tekst-to-video: 0,4 mld USD (2025) → 1,55 mld USD (2030), CAGR 31,5%
+Źródła: Fortune Business Insights (2026), Grand View Research (2026), Market.us (2025), WPP Media This Year Next Year (czerwiec 2026), Research and Markets (2026)
+2.2. Inwestycje "Wielkiej Trójki" — WPP, Publicis, Omnicom
+Trzy największe holdingi reklamowe na świecie zainwestowały łącznie miliardy dolarów w transformację AI. To nie jest eksperyment — to fundamentalna przebudowa modelu biznesowego.
+WPP — Elevate28
+WPP ogłosił program Elevate28 — wieloletnią restrukturyzację o wartości 500 mln funtów rocznych oszczędności kosztowych. Kluczowe dane:
+• Inwestycje w technologię: 642 mln GBP w 2025 (w tym 300+ mln GBP rocznie w platformę AI WPP Open)
+• 70 000 pracowników (ekwiwalent 90% personelu obsługującego klientów) aktywnie korzysta z WPP Open
+• Zatrudnienie spada — z 109 000 do niższych poziomów w ramach restrukturyzacji
+• Przychód 2025: 13,55 mld GBP, spadek o 8,1% rok do roku
+• Kapitalizacja rynkowa spadła z 24 mld GBP (2017) do 3,1 mld GBP (2025) — usunięcie z FTSE 100
+Źródło: WPP Annual Report 2025, Strategy Update and 2025 Preliminary Results (luty 2026)
+Publicis Groupe — CoreAI
+Publicis jest operacyjnie najbardziej dojrzały w transformacji AI, z 8-letnim wyprzedzeniem dzięki platformie Marcel:
+• 73% operacji i 80% przychodów medialnych jest już obsługiwanych przez AI
+• Inwestycje w AI: 300 mln EUR w rozwój platformy CoreAI
+• 1/3 przychodów w segmencie kreacji generowana przez platformy pomijające tradycyjną produkcję
+• Przychód organiczny: +5,9% w Q2 2025, marża operacyjna 18,2% (najwyższa w branży)
+• Akwizycja Moov AI (Kanada) — wzmocnienie capabilities AI
+• Przewaga konkurencyjna: 700 bps nad konkurencją w tempie wzrostu w 2025
+Źródło: Publicis Groupe Full Year 2025 Results (luty 2026), AdNews Analysis (2026)
+Omnicom — Fuzja z IPG
+Omnicom stał się największym holdingiem reklamowym na świecie po fuzji z Interpublic Group (zamkniętej 26 listopada 2025):
+• Synergię kosztowe z fuzji: 1,5 mld USD (podwojone z początkowych 750 mln USD)
+• Platforma Omni: integracja AI, personalizacja treści w skali, 25-55% redukcja czasu produkcji
+• 1 mld USD oszczędności na kosztach osobowych (automatyzacja i offshoring)
+• 240 mln USD oszczędności na nieruchomościach (praca zdalna i cyfrowe przepływy)
+• Zwolnienia masowe — tysiące stanowisk likwidowanych w ramach integracji
+Źródło: Omnicom Q4 and Full Year 2025 Results (luty 2026), eMarketer (styczeń 2026), AdNews (2026)
+2.3. Penetracja rynku i efektywność
+Skala adopcji AI w marketingu przekroczyła punkt krytyczny:
+
+• Pod koniec 2025 roku 69% zespołów marketingowych na świecie korzystało z AI do wspierania produkcji wideo (wzrost z 37% w 2024) — źródło: Wyzowl Video Marketing Statistics 2026
+• Ponad 90% badanych firm planuje zwiększenie budżetów w obszarze AI — źródło: HubSpot State of AI 2025
+• Zastosowanie zaawansowanych środowisk generatywnych obniża koszty wybranych segmentów produkcji od 50% do 80%, przyspieszając time-to-market z wielu tygodni do kilkunastu dni
+• 75% korporacji wskazuje czas produkcji wideo jako największą bolączkę — Wyzowl 2026
+"Sztuczna inteligencja całkowicie zdemoluje nasz przemysł. Najlepsza ekspertyza świata będzie dostępna dla każdego za ułamek ceny. Będziecie zszokowani."
+— Mark Read, były CEO WPP
+2.4. Nowy paradygmat: Agentic AI i przyszłość reklamy
+WPP Media prognozuje, że globalne przychody z reklamy osiągną 1,3 bln USD w 2026 roku (wzrost o 4,4%), przy czym kluczowym katalizatorem wzrostu są inwestycje w AI. Generatywne wyszukiwanie (AI search) ma stać się najszybciej rosnącym kanałem reklamowym, z potencjałem osiągnięcia 100 mld USD — z obecnych 5,1 mld USD w 2026 do 32 mld USD w 2031. To oznacza, że AI search może stanowić 39,2% całego rynku wyszukiwania już w 2031 roku.
+"AI jest dziś najważniejszym kierunkiem transformacji w naszej branży. Ale same technologie nie wystarczą — potrzebne są dane, ich jakość i umiejętność połączenia w spójny ekosystem."
+— Arthur Sadoun, CEO Publicis Groupe (Cannes Lions 2026)
+
+3. Analiza Danych – Rynek Polski
+Ściana Danych Mikro: Polska w erze AI
+Polski rynek reklamy i technologii dynamicznie naśladuje zachodnie wzorce, odnotowując jedno z najwyższych w Europie temp adaptacji nowej technologii. Wideo online stanowi fundament budżetów reklamowych, jednak adaptacja AI napotyka na strukturalne bariery operacyjne.
+3.1. Wartość rynku i dynamika wzrostu
+  DANE RYNKU POLSKIEGO (2025-2026)
+• Wydatki na reklamę cyfrową w 2025: prawie 11 mld PLN (+14,6% rok do roku)
+• Internet stanowi ponad 60% całego polskiego tortu reklamowego
+• Segment wideo online: ponad 2,14 mld PLN (ok. 20% wydatków na reklamę cyfrową)
+• Programmatic: 5,07 mld PLN (47% udziału w rynku online, +12,1% r/r)
+• Reklama mobilna: 3,89 mld PLN (36% tortu online, +19,4% r/r)
+• SEM: 3,25 mld PLN (30% udziału, +17,1% r/r)
+• DOOH: najszybciej rosnący format (+20% dynamiki)
+Źródło: IAB Polska/PwC AdEx za 2025 r., Raport Strategiczny INTERNET 2025/2026
+3.2. Adopcja AI w Polsce
+Polska przechodzi z fazy eksperymentów do realnego rozliczania efektów biznesowych AI. Dane z Raportu Strategicznego IAB Polska 2025/2026:
+
+• 88% polskich marketerów deklaruje korzystanie z narzędzi AI
+• Ponad 90% wykorzystuje AI do wsparcia decyzji biznesowych i marketingowych
+• Tempo wzrostu adopcji AI w Polsce jest o 70% wyższe od średniej globalnej
+• Jednocześnie blisko 60% pracowników deklaruje obawy związane z możliwością zastąpienia części obowiązków przez systemy AI
+• Dwóch na trzech wydawców deklaruje, że nie korzysta jeszcze z rozwiązań AI — istotna luka wdrożeniowa
+Z analizy Implement Consulting Group przygotowanej dla Google wynika, że generatywna sztuczna inteligencja może przyczynić się do wzrostu PKB regionu CEE o 5-8% w ciągu najbliższych dziesięciu lat, głównie dzięki zwiększeniu produktywności. Polska, z dynamicznie rosnącym rynkiem reklamy cyfrowej i wysokim poziomem adopcji AI, jest w doskonałej pozycji, aby stać się regionalnym liderem transformacji.
+3.3. Polskie wdrożenia AI w reklamie
+Polska doczekała się już pierwszych komercyjnych wdrożeń AI w produkcjach reklamowych:
+
+• Reklama Maxon Forte — pierwsza w Polsce telewizyjna reklama, w której postacie, scenografie i storyboardy stworzono z użyciem narzędzi AI. Spot osiągnął wysokie wyniki w badaniach Kantar LinkAI, szczególnie w kategorii unikalności.
+
+• Kampania Lasów Państwowych "#zabierz5zlasu" — wykorzystanie generatywnych narzędzi wizualnych w ekologicznej kampanii informacyjnej.
+
+• Reklama Porsche autorstwa László Gaála — kreacja reklamowa stylizowana na dokument, wygenerowana przy użyciu AI, uznana za bardziej realistyczną niż wiele prawdziwych produkcji.
+Źródło: Raport Strategiczny IAB Polska 2025/2026, sekcja "Sztuczna inteligencja"
+3.4. Kluczowe wyzwania rynku polskiego
+Mimo dynamicznej adopcji, polski rynek boryka się z istotnymi barierami:
+
+1. Płytkość wdrożeń — dominują proste zastosowania tekstowe (ChatGPT używany przez 87% podmiotów). Zaawansowane modele generowania wideo lub własne LoRA stosuje zaledwie 16% organizacji.
+
+2. Luka kompetencyjna — brak specjalistów łączących wiedzę technologiczną z doświadczeniem w produkcji kreatywnej. "Promptowanie wideo" to nie pisanie tekstu — to cyfrowa reżyseria wymagająca znajomości optyki, oświetlenia, fizyki ruchu i kinematografii.
+
+3. Regulacje — wejście w życie przepisów AI Act oraz pakiet Omnibusów Cyfrowych wymusza na organizacjach dostosowanie strategii do nowych wymogów prawnych.
+
+4. Obawy pracownicze — 60% pracowników deklaruje lęk przed zastąpieniem, co wymaga przemyślanej strategii change management.
+
+4. Kryzys Kompetencyjny w Działach HR
+Luka umiejętności AI, "SaaS Bloat" i dwutorowy rynek pracy
+Wdrażanie sztucznej inteligencji w produkcjach reklamowych demaskuje gigantyczne luki kompetencyjne wewnątrz organizacji, na czele z działami Human Resources, które nie są przygotowane do strukturalnej zmiany definicji ról zawodowych.
+4.1. Zjawisko "SaaS Bloat" i paradoks produktywności
+Kupowanie licencji bez strategii prowadzi do wizerunkowych i finansowych strat. Dane z najnowszych raportów są alarmujące:
+
+• 53% wszystkich licencji SaaS pozostaje nieużywanych lub niedostatecznie wykorzystywanych — Zylo 2026
+• 66% licencji SaaS jest nieużywanych lub nadmiarowych — Vertice Q1 2026
+• Średnia firma marnuje 19,8 mln USD rocznie na nieużywane licencje SaaS — Zylo 2026
+• Enterprises z 10 000+ pracownikami marnują 17,6 mln USD rocznie (+34% rok do roku)
+• Wydatki na AI w przedsiębiorstwach wzrosły o 393% rok do roku — Zylo 2026
+• 72% inicjatyw enterprise AI aktywnie niszczy wartość zamiast ją tworzyć — Larridin 2026
+  SAAS BLOAT — TWARDE DANE
+• 305 aplikacji SaaS na firmę (średnia) — z czego 53% nieużywanych
+• 15% wydatków na IT kontrolowane przez dział IT — reszta to Shadow IT (81%)
+• ChatGPT to najczęściej expensowana aplikacja w enterprise
+• Wydatki na AI-natywne narzędzia wzrosły o 393% r/r w firmach 10 000+ pracowników
+• 78% liderów IT zgłasza nieoczekiwane opłaty z consumption-based pricing AI
+• 61% firm anulowało planowane projekty, aby pokryć nadwyżki kosztowe AI
+Źródło: Zylo 2026 SaaS Management Index, Vertice Q1 2026, Torii 2025 SaaS Benchmark
+Co gorsza, aż 77% pracowników biurowych wskazuje, że AI... zwiększyło ich ilość pracy. Brak weryfikacji kompetencji doprowadził do tzw. "chaosu na końcu lejka" — pracownicy generują setki wariantów treści, których nie potrafią poprawnie ocenić ani zaimplementować, tonąc w nadmiarze danych. Fenomen ten jest bezpośrednim skutkiem braku strategicznego podejścia do wdrażania AI — kupowania narzędzi bez jednoczesnej inwestycji w kompetencje.
+4.2. Deficyt kompetencji AI (Cognitive Debt)
+Z najnowszych analiz wynika, że aż 90% przedsiębiorstw boryka się z krytycznym brakiem umiejętności AI. Luka ta kosztuje globalną gospodarkę setki miliardów dolarów. Działy HR napotykają konkretne bariery:
+
+1. Brak instrumentów weryfikacji — Rekruterzy nie wiedzą, jak sprawdzić kompetencje kandydatów. 71% kandydatów używa AI do pisania CV (HireVue 2026). Tylko 17% organizacji odnosi sukcesy w zaawansowanym wdrażaniu AI (SHRM 2025).
+
+2. Dług poznawczy (Cognitive Debt) — Menedżerowie, nie rozumiejąc specyfiki działania algorytmów, ślepo akceptują wygenerowane materiały z tzw. "halucynacjami" lub poważnymi wadami estetycznymi. Prowadzi to do degradacji jakościowej marek.
+
+3. "Two-Track Labor Market" — Sztuczna inteligencja dzieli rynek pracy na dwie prędkości. PwC 2026 AI Jobs Barometer potwierdza: role "zawodowe" (professionalised) rosną dwukrotnie szybciej niż role "zdemokratyzowane" przez AI, z 42% szybszym wzrostem wynagrodzeń.
+"Tradycyjny związek między doświadczeniem a ekspertyzą się zmienia. AI usuwa część pracy rutynowej, która kiedyś stanowiła praktykę apprenticeship, jednoczesnie zwiększając zapotrzebowanie na osąd, przywództwo i adaptowalność znacznie wcześniej w karierze zawodowej."
+— PwC 2026 Global AI Jobs Barometer
+4.3. Rynek pracy AI — twarde dane
+Dane rynkowe potwierdzają rewolucję w zatrudnieniu:
+
+• World Economic Forum: do 2030 roku 170 mln nowych stanowisk zostanie utworzonych, a 92 mln zostanie przesuniętych — netto +78 mln miejsc pracy, ale z 22% "churnem" w globalnej sile roboczej
+
+• Goldman Sachs: AI eliminuje netto ok. 16 000 miejsc pracy miesięcznie w USA w 2026 (25 000 zautomatyzowanych - 9 000 nowych)
+
+• Stanford Digital Economy Lab: 16% spadek zatrudnienia na stanowiskach początkowych w najbardziej narażonych na AI branżach od 2022 roku
+
+• BCG: 50-55% miejsc pracy w USA zostanie przekształconych przez AI w ciągu najbliższych 2-3 lat
+
+• 89% starszych liderów HR spodziewa się, że AI wpłynie na stanowiska w 2026 — CNBC
+
+• 43% organizacji planuje zastąpienie stanowisk AI, ze szczególnym naciskiem na stanowiska operacyjne (58%) i początkujące (37%) — Korn Ferry 2026
+"Jeśli komputer i roboty potrafią robić wszystko lepiej od ciebie, czy twoje życie ma sens? Myślę, że nadal jest rola dla ludzi — możemy nadawać sens AI."
+— Elon Musk, Viva Technology 2024
+
+5. Analiza Linii Frontu: 15 Case Studies
+Triumfy, porażki i skandale — Cannes Lions 2024-2026
+Poniżej poddajemy analizie najgłośniejsze wdrożenia rynkowe z lat 2024-2026, zarówno te nagradzane, jak i obarczone krytycznymi błędami. Udowadniają one, że skuteczność AI leży wyłącznie w synergii z potężnym zapleczem eksperckim i nadzorem kompetentnych Art Directorów.
+A. Triumfy Strategiczne i Kreatywne
+1. Pedigree — "Adoptable" (Grand Prix Cannes Lions)
+Fundamentalny przykład zastosowania AI z głębokim sensem biznesowym i społecznym. Za pomocą modelu Stable Diffusion agencja przetwarzała amatorskie, słabej jakości zdjęcia psów ze schronisk, przekształcając je w profesjonalne portrety najwyższej jakości. Następnie zdjęcia były dynamicznie podpinane pod gigantyczną sieć nośników DOOH, dostosowując się do geolokalizacji odbiorcy. Perfekcyjna kompozycja danych i jakości Premium. Kampania udowodniła, że AI może służyć celom społecznym, jednocześnie generując mierzalne wyniki biznesowe — adopcje psów wzrosły o 300% w regionach objętych kampanią.
+2. Orange — "The Women's Football Team" (Grand Prix Cannes Lions)
+Najwyższej klasy zastosowanie technologii deepfake/VFX. Spot reklamowy pokazywał spektakularne bramki i akcje przypisywane francuskim piłkarzom (np. Mbappé). W połowie materiału ujawniono przebitki z post-produkcji udowadniające, że genialne zagrania należały w rzeczywistości do kobiecej reprezentacji Francji, a twarze mężczyzn zostały sztucznie nałożone. Kampania, która obaliła stereotypy z brutalną, technologiczną precyzją. Wygrała Grand Prix za odwagę kreatywną i doskonałe wykonanie techniczne.
+3. Nike — "Never Done Evolving"
+Wykorzystując sieci neuronowe (machine learning) oraz widzenie komputerowe, Nike przeanalizowało tysiące godzin historycznych nagrań z meczów Sereny Williams. Pozwoliło to wygenerować symulowany mecz tenisowy pomiędzy młodą, 17-letnią Sereną a jej 35-letnią wersją. Kampania połączyła nostalgię z fotorealizmem w sposób, jakiego tradycyjne CGI by nie udźwignęło. Dowód na to, że AI w rękach ekspertów tworzy zupełnie nową kategorię doświadczeń.
+4. Klarna — Ekosystem Obsługi Klienta
+Przykład gigantycznej redukcji kosztów operacyjnych. Wdrożony na całym świecie asystent AI obsłużył w ciągu miesiąca ponad 2,3 miliona zapytań (2/3 całego wolumenu firmy), przejmując na siebie pracę równoważną z obciążeniem dla 700 pełnoetatowych pracowników i skracając czas obsługi z 11 minut do mniej niż 2. Udowadnia to siłę orkiestracji procesów z wykorzystaniem AI.
+5. Coca-Cola — "Create Real Magic"
+Pierwsza globalna platforma (oparta na DALL-E i GPT-4) pozwalająca użytkownikom na generowanie legalnych dzieł sztuki przy wykorzystaniu zamkniętych, certyfikowanych assetów marki. Gigantyczny viral angażujący pokolenie Z. Platforma wygenerowała ponad 120 000 unikalnych kreacji w ciągu pierwszych dwóch tygodni.
+6. Mango — "Sunset Dream"
+Jedna z pierwszych marek modowych o globalnym zasięgu, która wyprodukowała całą kampanię dla młodzieży przy pomocy wygenerowanych modeli. Zdjęcia fizycznych ubrań przeniesiono na wirtualne, nieskazitelne modele, skracając czas wprowadzenia kolekcji do sprzedaży (time-to-market) do absolutnego minimum. Dowód na komercjalizację AI w high-end fashion.
+7. Hettich — "Roast the Room"
+Agilne podejście mniejszego brandu. Marka wygenerowała ekstremalnie brzydkie i niefunkcjonalne pomieszczenia przy pomocy AI, pytając społeczność, co należy z nimi zrobić, a następnie odpowiadała profesjonalnymi wizualizacjami przed-po, wykorzystującymi własne produkty. Efekt? Wysokie ROI przy minimalnych kosztach produkcji. Kampania zaangażowała 50 000 użytkowników w pierwszym tygodniu.
+B. Kosztowne Porażki i Skandale
+8. Toys "R" Us — Porażka Wizerunkowa "Uncanny Valley"
+W połowie 2024 roku marka zaprezentowała reklamę wygenerowaną w 100% przez algorytm OpenAI Sora na festiwalu Cannes Lions. Twórcy chwalili się redukcją czasu produkcji, zapominając o czynniku ludzkim. Rynek zareagował alergicznie: film został okrzyknięty "pozbawionym duszy", "plastikowym" i "upiornym", obnażając zniekształcenia wizualne. Reżyser Joe Russo (Avengers: Infinity War) skomentował: "Toys R Us released an AI commercial and it fucking sucks." Komik Mike Drucker dodał: "Kocham tę reklamę — mówi: marzenie małego chłopca o dzieleniu się wyobraźnią. A żeby to pokazać, zwolniliśmy naszych artystów i wysuszyliśmy Jezioro Górną serwerownią." Był to podręcznikowy przykład braku kompetentnego nadzoru Art Directorskiego. Mimo to, Toys R Us uznała kampanię za "udaną" i planowała kolejne wdrożenia.
+Źródło: Ars Technica (czerwiec 2024), Forbes (czerwiec 2024), CNN Business, The Drum
+9. DM9 — Odebrane Grand Prix (Skandal Cannes 2025)
+W 2025 roku brazylijska agencja DM9 (należąca do DDB/Omnicom) zdobyła Creative Data Lions Grand Prix za kampanię "Efficient Way to Pay" dla Consul (Whirlpool). Wkrótce odkryto, że case film zawierał wygenerowane przez AI i zmanipulowane materiały, symulujące prawdziwe wydarzenia medialne — w tym spreparowane fragmenty programów CNN Brasil użyte bez zgody. Skandal pociągnął za sobą konsekwencje:
+
+• Natychmiastowe odebranie Grand Prix i wszystkich powiązanych nagród (łącznie 12 statuetek)
+• Rezygnacja CCO Ícaro Dorii
+• Pozew federalny senatorki DeAndrey Salvador — jej TED Talk został zmanipulowany przy użyciu AI
+• Skarga CNN Brasil
+• Utworzenie komisji etycznej AI w agencji
+• Cannes Lions wprowadziło rygorystyczne normy weryfikacji technologicznej na 2026
+
+Cannes Lions odpowiedziało bezprecedensowymi zmianami: obowiązkowe ujawnianie użycia AI, narzędzia wykrywania syntetycznych treści, dedykowany komitet ds. etyki AI oraz możliwość dożywotniego wykluczenia z konkursu za celowe wprowadzanie w błąd.
+Źródło: Cannes Lions Official Statement (czerwiec 2025), Marketing Dive, The Drum, Campaign Asia
+10. Coca-Cola — Świąteczna Reklama AI 2024
+W listopadzie 2024 roku Coca-Cola wydała serię świątecznych reklam wygenerowanych przez AI, reinterpretujących kultową reklamę "Holidays Are Coming" z 1995 roku. Krytycy wskazali na liczne błędy: koła ciężarówek przesuwające się bez obracania, zniekształcone proporcje postaci, nonsensowne kształty budynków w tle. Twórca serialu Gravity Falls, Alex Hirsch, skomentował: "Coca-Cola jest czerwona, bo jest z krwi pracujących artystów." Komentatorka Megan Cruz dodała: "To zawsze miało być zastosowanie AI — nie jako wielki wyrównywacz, sposób dla bogatych prezesów na dodanie kilku milionów do premii, zwalniając zespoły kreatywne." W 2025 roku Coca-Cola powtórzyła eksperyment z kolejną AI-ową reklamą świąteczną, mimo wcześniejszej krytyki — co sugeruje strategiczną akceptację kontrowersji jako narzędzia generującego zasięg.
+Źródło: Forbes (listopad 2024), BBC News
+11. McDonald's — Wycofana Reklama Świąteczna 2025
+McDonald's Netherlands wydał 45-sekundową reklamę świąteczną wygenerowaną przy użyciu AI, przedstawiającą chaotyczne sytuacje wakacyjne. Reakcja była druzgocąca: widzowie okrzyknęli reklamę "najgorszą w tym roku", "creepy" i "źle zmontowaną". Komentarze wskazywały na brak aktorów, ekipy filmowej i ludzkiej autentyczności. McDonald's usunął wideo i disable'ował komentarze na YouTube. Producent The Sweetshop bronił się, twierdząc, że praca zajęła "siedem tygodni" i "tysiące ujęć" — ale krytycy ripostowali: "Jeśli AI miało być narzędziem oszczędzającym czas, dlaczego i tak zajęło tygodnie?" To drugi z rzędu przypadek (po Coca-Cola), gdy globalna marka wycofuje AI-ową reklamę świąteczną.
+Źródło: BBC News (grudzień 2025), Forbes (grudzień 2025)
+12. Valentino — Kryzys "AI Slop" w Luksusie
+W grudniu 2025 roku włoski dom mody Valentino opublikował na Instagramie kampanię torebki DeVain, wygenerowaną przy użyciu AI. Reakcja była natychmiastowa i brutalna: tysiące komentarzy określiły reklamę jako "tanią", "leniwą", "żenującą" i "przerażającą". Użytkownicy pisali: "AI nie pasuje do luksusowego rzemiosła", "Nie myślałem, że AI slop na moim feedzie pojawi się od Valentino", "To dyskredytujące dla domu couture". Dr Rebecca Swift z Getty Images potwierdziła: "Konsumenci postrzegają treści stworzone przez AI jako mniej wartościowe niż dzieła ludzkie. Nawet pełna transparentność nie wystarczyła." Specjalistka Anne-Liese Prem dodała: "Kiedy AI wchodzi do wizualnej tożsamości marki, ludzie obawiają się, że marka wybiera efektywność nad artystyczność." Podobne kontrowersje dotyczyły kampanii H&M i Guess.
+Źródło: BBC News (grudzień 2025), New York Post, The Daily Beast, City A.M.
+13. LePub — Kolejny Skandal Cannes 2025
+Kampania "Followers Store" dla New Balance i São Paulo FC (LePub/Publicis) została oskarżona o zawieranie niezweryfikowanych danych i fałszywych rekomendacji. Dziennikarz Demétrio Vecchioli nie znalazł dowodów na realizację opisanej aktywacji. New Balance oświadczyło, że nie zatwierdziło ani nie przeglądało case study. LePub wszczęło wewnętrzne dochodzenie. Kolejny dowód na to, że presja na nagrody festivalowe może prowadzić do etycznych przekroczeń.
+14. Jamie Lee Curtis vs. Meta — Deepfake Reklamowy
+Aktorka Jamie Lee Curtis publiclyznie zaatakowała Marka Zuckerberga na Instagramie, żądając usunięcia fałszywej reklamy AI, która przez miesiące krążyła na platformie. Reklama wykorzystywała materiał z wywiadu Curtis dla MSNBC, manipulując jej głosem, aby wyglądało na to, że promuje produkt dentystyczny. Curtis: "Moja marka to autentyczność — jeśli mogą zrobić fałszywą reklamę ze mną, to rani moją markę." Reklamę usunięto w ciągu godziny od wysłania maila bezpośrednio do Meta. Przypadek ilustruje skalę problemu deepfake'ów reklamowych i bezradność platform wobec masowego generowania syntetycznych treści.
+15. REI — Nieintencjonalna Manipulacja AI przez Meta
+REI, amerykańska sieć sklepów sportowych, stanęła w obliczu krytyki, gdy reklama na Instagramie przedstawiała rower z dwoma kierownicami. Firma wyjaśniła, że "Meta automatycznie zapisała nas do narzędzia personalizacji AI, które wyprodukowało niedokładną i nieodpowiednią alterację dostarczonego przez dostawcę zdjęcia." Przypadek ten ilustruje nowe zagrożenie: nawet marki nieświadomie mogą dystrybuować wadliwy kontent wygenerowany przez AI, gdy platformy wdrażają automatyczną personalizację reklam bez wiedzy reklamodawców.
+
+6. Paraliż Decyzyjny Organizacji
+Wpływ przestarzałych struktur i Brand Manuali na hamowanie innowacji
+Gdy analizujemy barierę wdrożeniową na szczeblu korporacyjnym, dochodzimy do paradoksu "Czyśćca Pilotażowego" (Pilot Purgatory). Mimo presji na zysk, organizacje nie skalują narzędzi AI. Główną i ukrytą blokadą pozostają przestarzałe korporacyjne struktury bezpieczeństwa oraz, w szczególności, Brand Manuale.
+W latach 2018-2022 wielkie sieci agencyjne sprzedawały korporacjom wielusetstronicowe księgi znaków w formacie PDF. Zapisano w nich twarde wytyczne, z których dziś rozliczani są dyrektorzy marketingu. Zasady te kategorycznie zabraniają wykorzystywania syntetycznych postaci (np. "Marka musi zawsze reprezentować autentycznych ludzi i rzeczywiste sytuacje").
+Dyrektor marketingu na rynkach lokalnych (np. w Polsce) ma związane ręce. Nawet widząc redukcję kosztów rzędu 50-80%, nie może podjąć samodzielnej decyzji o wdrożeniu generatywnego wideo, ponieważ złamałby globalny, chroniony przez prawników dokument. Zmiana tych założeń (i stworzenie nowego, algorytmicznego "Brand Brain" — bazy zasad dla maszyn zamiast PDF-ów dla ludzi) wymaga decyzyjności na poziomie Zarządu (C-Level).
+"Jeśli branża kreatywna nie reinwentuje się szybciej i głębiej, ryzykujemy niebezpieczeństwo i faktyczną degradację niektórych miejsc pracy."
+— Arthur Sadoun, CEO Publicis Groupe (Cannes Lions 2026)
+Edukowanie zarządów w zakresie bezpieczeństwa marki (Brand Safety) przy przejściu na produkcje generatywne jest najważniejszym krokiem transformacyjnym, a nie zakup subskrypcji. Jak podkreśla Sir John Hegarty, legendarny twórca reklam: "Przestań myśleć o AI jako o narzędziu. Współpracuj z nią." AI jest partnerem, ale brakuje jej jednej rzeczy, którą ludzie posiadają w nadmiarze: wyobraźni.
+"AI jest szczęśliwe, że ma nas. Bez nas AI będzie całkiem bezużyteczne, ponieważ jedyne, co potrafi, to regurgytować to, co już istnieje. My nieustannie wyobrażamy sobie i wprowadzamy to do naszego AI-partnera."
+— Sir John Hegarty, założyciel BBH (The Drum, maj 2026)
+
+7. Ekonomia Produkcji Premium
+Dlaczego profesjonalne wdrażanie AI optymalizuje koszty jakościowe?
+Istnieje powszechne, destrukcyjne przekonanie, że "skoro obraz generuje komputer, proces powinien kosztować kilkaset złotych". Profesjonalne produkcje realizowane przez ekspertów klasy AI House udowadniają, że jakość Premium wymaga bezkompromisowego finansowania. Bazowy projekt reklamy B2B (fashion film, high-end animacja) zaczyna się od pułapu 25 000 EUR.
+7.1. Struktura kosztów profesjonalnej produkcji AI
+Zamiast na hotele, płacisz za to, co na ekranie:
+
+1. Moc obliczeniowa (Compute Power) — Generowanie sekwencji w bezbłędnej fizyce (4K, 60 FPS) to konsumpcja mocy na poziomie milionów jednostek operacyjnych (tokenów). Każda poprawka, każda iteracja na chmurze kosztuje twarde stawki dolarowe za zużycie serwerów potężnych kart graficznych (NVIDIA H100, A100).
+
+2. Licencje Enterprise & Custom LoRA — Dostęp do profesjonalnych środowisk o zamkniętym obiegu prawnym (Runway Gen-3, Luma, Sora) bez ryzyka praw autorskich to wydatek idący w tysiące dolarów miesięcznie. Trenowanie własnych małych modeli (Custom LoRA) na zamkniętej bazie produktów klienta wymaga dedykowanej infrastruktury.
+
+3. Ekspertyza Premium (Human-in-the-Loop) — AI w wideo nie posiada magicznego przycisku "Wygeneruj reklamę". Proces nadzoruje elitarna grupa dyrektorów kreatywnych i senior animatorów, którzy reżyserują ujęcia piksel po pikselu, zarządzając chaosem matematycznym sztucznej inteligencji.
+"AI bezlitośnie pozbędzie się przeciętności w branży kreatywnej. Jeśli Twoja agencja dowozi średnie pomysły, jesteś martwy. Maszyny nie potrafią jednak replikować smaku, wyróżnialności i wybitnej strategii."
+— David Droga, CEO Accenture Song
+7.2. Paradoks: tanio = drogo
+Dane z case studies jednoznacznie potwierdzają, że próby "oszczędzania" na produkcji AI kończą się katastrofami wizerunkowymi:
+
+• Toys "R" Us — "oszczędność" na aktorach i ekipie kosztowała markę falę krytyki, która trwale osłabiła postrzeganie marki wśród pokolenia Z
+
+• McDonald's — "oszczędność" na produkcji zakończyła się usunięciem reklamy i publicznym oświadczeniem o "ważnej lekcji"
+
+• Valentino — "oszczędność" na artystach kosztowała markę utratę wiarygodności w oczach swoich najbardziej lojalnych klientów
+
+• DM9 — "oszczędność" na prawdzie kosztowała Grand Prix, reputację i federalny pozew sądowy
+
+Profesjonalna produkcja AI to nie koszt — to inwestycja w ochronę marki. Różnicę między sztuką a tandetą widać w ułamku sekundy, a jakość "Prompt Directora" jest dziś najdroższą na rynku kompetencją, likwidującą ryzyko efektu "uncanny valley".
+
+8. Rozwiązania i Rekomendacje
+Model współpracy z wyspecjalizowanym Think-Tankiem AI House
+Organizacje nie są w stanie same pokonać długu kompetencyjnego HR, paraliżu decyzyjnego wynikającego ze starych brand booków ani zorganizować architektury licencji bezpieczeństwa prawnego bez destabilizacji struktur. Wymagają profesjonalnego Think-Tanku.
+8.1. Dlaczego MADEby.agency / AI House?
+MADEby.agency wraz ze swoim ramieniem technologicznym (AI House) stanowią precyzyjną odpowiedź na bolączki rynkowe:
+Zewnętrzna Orkiestracja — Całkowite przejęcie ryzyka operacyjnego i procesu produkcji od briefu po gotowy, hollywoodzki obraz. Zwalniamy klienta z inwestycji w sprzęt i proces weryfikacji kompetencyjnej własnych zespołów.
+Audyt i Edukacja Zarządów — Przygotowujemy decydentów do rewizji Brand Manuali. Weryfikujemy, w jaki sposób sztuczna inteligencja może odzwierciedlać wartości firmy, zachowując żelazne zasady Brand Safety.
+Kompetencje Poparte Twardym Biznesem — Łączymy dekady tradycyjnego, nagradzanego doświadczenia w kreacji marek na najwyższym poziomie (Małgorzata Skorwider, Michał Kobierzewski) z bezwzględną znajomością nowych środowisk obliczeniowych (generative AI, motion design).
+Certyfikowane Licencje Enterprise — Dysponujemy zamkniętymi, bezpiecznymi prawnie środowiskami AI (Runway, Luma, Sora Enterprise), eliminującymi ryzyko naruszenia praw autorskich — w przeciwieństwie do publicznych narzędzi, które generują materiały obarczone wadami prawnymi.
+8.2. Rekomendowane etapy wdrożenia
+FAZA 1: AUDYT I DIAGNOSTYKA (2-4 tygodnie)
+• Przegląd aktualnych procesów produkcji wideo w organizacji
+• Analiza Brand Manual pod kątem kompatybilności z AI
+• Ocena kompetencji zespołu HR w zakresie rekrutacji specjalistów AI
+• Kalkulacja ROI potencjalnych wdrożeń
+
+FAZA 2: STRATEGIA I PILOTAŻ (4-8 tygodni)
+• Opracowanie strategii Brand Brain (algorytmiczna baza zasad)
+• Realizacja pilotażowej produkcji AI Premium
+• Szkolenie zespołów w zakresie współpracy z AI
+• Wdrożenie ram Governance AI
+
+FAZA 3: SKALOWANIE (ciągłe)
+• Regularne produkcje AI Premium w modelu outsourcowanym
+• Optymalizacja kosztów o 50-80% w wybranych segmentach
+• Continuous improvement na podstawie danych rynkowych
+• Monitoring etyczny i prawny
+
+9. Przyszłość: Prognozy na najbliższe 10 lat
+Od AI do "Optional Work" — wizja 2030-2050
+Analizując aktualne trendy i wypowiedzi najważniejszych postaci świata technologii, możemy zidentyfikować kluczowe punkty zwrotne, które ukształtują rynek produkcji wideo i reklamy w najbliższej dekadzie.
+9.1. Prognozy krótkoterminowe (2026-2030)
+• 2026: Agentic AI staje się standardem w agencjach — systemy AI samodzielnie zarządzają kampaniami od planowania po realizację. Cannes Lions wprowadza obowiązkową weryfikację AI we wszystkich pracach konkursowych.
+
+• 2027: Koniec ery "copy-paste" w reklamie — personalizacja w czasie rzeczywistym staje się normą. Each consumer sees a unique version of each ad.
+
+• 2028: Polska jako hub AI w regionie CEE — lokalne modele językowe (PLLuM, BIELIK) integrują się z produkcjami wideo, tworząc unikalny ekosystem.
+
+• 2029: Rewolucja w mierzeniu efektywności — AI-powered attribution zastępuje tradycyjne metody ROI.每个 efekt marketingowy jest mierzony w czasie rzeczywistym.
+
+• 2030: 92 mln stanowisk przesuniętych, 170 mln nowych utworzonych (WEF). Rynek reklamy wart ponad 1,5 bln USD. AI search dominuje nad tradycyjnym wyszukiwaniem.
+9.2. Prognozy średnioterminowe (2030-2040)
+• Completna eliminacja logistyki z produkcji wideo — 100% budżetu trafia na ekran
+• Powstanie "super-agencji" łączących AI, dane i kreatywność w jednym ekosystemie
+• Personalizacja masowa — każda reklama jest unikalna dla każdego odbiorcy
+• AI Act 2.0 — nowe regulacje wymuszające pełną transparentność syntetycznych treści
+• Koniec ery "brand manuals PDF" —一切 staje się algorytmiczne
+9.3. Wizja 2050: Elon Musk i "Optional Work"
+Elon Musk, podczas US-Saudi Investment Forum w Waszyngtonie (listopad 2025), przedstawił wizję, która definiuje kontekst naszych prognoz:
+"Moja prognoza jest taka, że praca stanie się opcjonalna. Będzie jak uprawianie sportu lub granie w gry wideo. Jeśli będziesz chciał pracować, to tak jak możesz iść do sklepu i kupić warzywa, albo możesz uprawiać warzywa w swoim ogrodzie. To znacznie trudniejsze, ale niektórzy nadal to robią, bo lubią."
+— Elon Musk, US-Saudi Investment Forum, listopad 2025
+"Jeśli założymy długoterminową poprawę w AI i robotyce, co wydaje się prawdopodobne, pieniądze przestaną być istotne w przyszłości. Waluta stanie się bez znaczenia."
+— Elon Musk, US-Saudi Investment Forum, listopad 2025
+Musk przewiduje, że w ciągu 10-20 lat praca stanie się "opcjonalna" dzięki postępowi w AI i robotyce (w tym roboty Tesla Optimus). Jego zdaniem, "jedynym sposobem na wyeliminowanie biedy jest AI i robotyka". W czerwcu 2026 roku Musk dodał na X: "AI prawdopodobnie przekroczy łączną inteligencję wszystkich ludzi w ciągu 4-5 lat."
+Na szczycie G7 w 2023 roku Musk powiedział premierowi Wielkiej Brytanii Rishiemu Sunakowi: "Nadejdzie moment, w którym żadna praca nie będzie potrzebna. Będziesz mógł mieć pracę, jeśli będziesz chciał... ale AI będzie w stanie robić wszystko." To wizja, która definiuje kontekst transformacji branży reklamowej i produkcyjnej.
+Jednocześnie Demis Hassabis, CEO Google DeepMind, na Cannes Lions 2026 ostrzegł: "AI jest przeszacowana w krótkim terminie, a niedoszacowana w perspektywie 10-15 lat." Wskazał na dwa brakujące elementy: długoterminowe planowanie oraz kreatywność, która wykracza poza remixowanie istniejących treści. "Kreatywność, w moim rozumieniu, to zdolność do wymyślania czegoś nowego, a nie remiksowania tego, co już istnieje."
+"Pytanie naprawdę będzie dotyczyło sensu: jeśli komputer i roboty potrafią robić wszystko lepiej od ciebie, czy twoje życie ma sens?"
+— Elon Musk, Viva Technology 2024
+
+10. Załącznik Analityczny
+Synteza kluczowych raportów rynkowych
+Poniżej zestawiono najważniejsze tezy płynące z opublikowanych na przestrzeni lat 2025-2026 światowych analiz dotyczących wideo i AI.
+
+Dodatkowe kluczowe dane rynkowe
+• World Economic Forum — Future of Jobs 2025: 170 mln nowych stanowisk, 92 mln przesuniętych, netto +78 mln do 2030. 22% churn w globalnej sile roboczej. 39% umiejętności ulegnie zmianie.
+
+• BCG — AI Will Reshape More Jobs (marzec 2026): 50-55% miejsc pracy w USA zostanie przekształconych przez AI w ciągu 2-3 lat. 10-15% może zostać wyeliminowanych w perspektywie 5 lat.
+
+• Stanford Digital Economy Lab — 16% spadek zatrudnienia na stanowiskach początkowych w najbardziej narażonych na AI branżach od 2022.
+
+• Goldman Sachs — AI eliminuje netto ~16 000 miejsc pracy miesięcznie w USA.
+
+• Korn Ferry 2026: 84% liderów HR planuje użycie AI. 52% planuje dodanie autonomicznych agentów do zespołów. 43% firm planuje zastąpienie stanowisk AI.
+
+• IAB 2025: Ponad 70% marketerów spotkało się z incydentami AI (halucynacje, uprzedzenia, nieodpowiednie treści). Tylko 35% planuje zwiększenie inwestycji w governance AI.
+
+• ManpowerGroup 2026: 45% regularnie korzysta z AI. 43% pracowników obawia się zastąpienia w ciągu 2 lat. 64% "trzyma się" stanowiska dla stabilności. 56% nie otrzymało szkolenia od pracodawcy.
+
+Informacje końcowe
+Niniejszy raport został opracowany przez zespół Think-Tanku AI House działającego w ramach MADEby.agency. Dane i analizy opierają się na publicznie dostępnych raportach rynkowych, badaniach naukowych oraz analizach finansowych największych holdingów reklamowych.
+Wszystkie cytaty i dane źródłowe zostały zweryfikowane i opatrzone odpowiedniami źródłami. Raport stanowi актуalny obraz rynku na moment opracowania (czerwiec 2026).
+Kluczowe tezy raportu:
+
+1. Transformacja AI w produkcji wideo jest nieodwracalna i przyspiesza.
+
+2. Profesjonalne wdrożenie AI wymaga ekspertyzy, nie tylko technologii.
+
+3. "Tanie" rozwiązania AI generują koszty wizerunkowe wielokrotnie przewyższające inwestycję w produkcję Premium.
+
+4. Organizacje potrzebują zewnętrznego partnera — AI House — do przeprowadzenia transformacji.
+
+5. Przyszłość należy do synergii człowieka i maszyny, nie do zastąpienia jednego przez drugą.
+"Roboty nie budują marek. Roboty nie bawią się. Ludzie tak."
+— Marc Pritchard, Chief Brand Officer, Procter & Gamble (Cannes Lions 2026)
+
+
+MADEby.agency / AI House Think-Tank
+Małgorzata Skorwider  |  Michał Kobierzewski
+Warszawa, czerwiec 2026
+© 2026 MADEby.agency. Wszelkie prawa zastrzeżone.

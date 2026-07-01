@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap');
+
+:root {
+  --bg: #0b0c10;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-blur: 40px;
+  --accent: #ff4e00;
+  --text-main: #f5f5f5;
+  --text-muted: #888;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  margin: 0; padding: 0;
+  overflow-x: hidden;
+  font-weight: 300;
+  scroll-behavior: smooth;
+}
+
+/* Background Visuals - very soft and large, replicating the elegant depth */
+.bg-visual {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(29, 233, 182, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 78, 0, 0.08) 0%, transparent 40%);
+}
+
+.container { max-width: 1400px; margin: 0 auto; padding: 40px; }
+
+/* Top Nav - very delicate */
+.top-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 80px;
+}
+.logo { font-size: 1.2rem; font-weight: 500; letter-spacing: 2px; }
+
+.nav-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 6px 16px 6px 6px; background: #fff; color: #000; border-radius: 30px;
+  font-size: 0.75rem; font-weight: 500;
+}
+.nav-pill .avatar { 
+  width: 24px; height: 24px; border-radius: 50%; background: #333; 
+  display:flex; justify-content:center; align-items:center; color:#fff; font-size:10px;
+}
+.circle-btn {
+  width: 40px; height: 40px; border-radius: 50%; background: #fff;
+  display: flex; justify-content: center; align-items: center; cursor: pointer;
+}
+.circle-btn span { display:block; width: 14px; height: 1px; background: #000; position:relative; }
+.circle-btn span::before, .circle-btn span::after { content:''; position:absolute; width:14px; height:1px; background:#000; left:0; }
+.circle-btn span::before { top: -4px; }
+.circle-btn span::after { top: 4px; }
+
+/* Typography */
+h1 { font-size: clamp(3.5rem, 7vw, 7rem); font-weight: 200; line-height: 1.1; letter-spacing: -2px; margin-bottom: 30px; }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 200; line-height: 1.2; letter-spacing: -1px; margin-bottom: 20px; }
+p { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 30px; max-width: 500px; font-weight: 300; }
+.label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 3px; color: var(--text-muted); margin-bottom: 15px; display: block; }
+.huge-number { font-size: clamp(4rem, 8vw, 8rem); font-weight: 200; line-height: 1; margin-bottom: 10px; color: #fff; }
+
+/* Glass Panel - delicate */
+.glass-panel {
+  background: var(--glass);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 40px;
+  position: relative;
+}
+
+/* Roadmap Navigation (Sticky Bottom) */
+.roadmap-wrapper {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+  width: 90%; max-width: 1000px; z-index: 100;
+}
+.roadmap-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 50px; padding: 20px 40px;
+}
+
+.roadmap-point {
+  display: flex; flex-direction: column; align-items: center; gap: 12px; position: relative;
+  text-decoration: none; flex: 1;
+}
+/* The dashed connecting line */
+.roadmap-point:not(:last-child)::after {
+  content: ''; position: absolute; top: 15px; left: 60%; width: 80%; height: 1px;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 4px, transparent 4px, transparent 8px);
+}
+
+.point-icon {
+  width: 32px; height: 32px; border-radius: 50%; background: #fff; color: #000;
+  display: flex; justify-content: center; align-items: center; font-size: 0.7rem; font-weight: 600;
+  transition: transform 0.3s; position: relative; z-index: 2;
+}
+.roadmap-point:hover .point-icon { transform: scale(1.1); }
+.point-text { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px; color: #777; text-align: center; }
+
+/* Score Widget (Image 4) */
+.widget-score {
+  position: relative; width: 200px; height: 200px;
+  display: flex; justify-content: center; align-items: center; margin: 0 auto;
+}
+.circle-dots {
+  position: absolute; width: 100%; height: 100%; border-radius: 50%;
+  border: 2px dashed rgba(29, 233, 182, 0.3); animation: spin 30s linear infinite;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+.inner-circle {
+  width: 140px; height: 140px; background: rgba(255,255,255,0.03); border-radius: 50%;
+  display: flex; justify-content: center; align-items: center; flex-direction: column;
+  backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08);
+}
+.score-val { font-size: 2.5rem; font-weight: 200; color: #fff; line-height: 1; margin-bottom: 5px; }
+.score-lbl { font-size: 0.6rem; text-transform: uppercase; color: #888; letter-spacing: 1px; }
+
+/* Chart Widget (Image 5) */
+.widget-chart {
+  padding: 30px; position: relative; border-radius: 30px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+}
+.chart-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+.chart-title { font-size: 1.1rem; font-weight: 300; color: #fff; }
+.chart-subtitle { font-size: 0.7rem; color: #888; margin-top: 5px; display:block;}
+.badge { background: rgba(255, 78, 0, 0.2); color: #ff4e00; padding: 4px 10px; border-radius: 20px; font-size: 0.65rem; }
+.chart-btn { 
+  width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.05); 
+  display:flex; justify-content:center; align-items:center; color:#fff; border:1px solid rgba(255,255,255,0.1); cursor:pointer;
+}
+.chart-svg-container { position: relative; height: 100px; width: 100%; margin-top: 20px;}
+.chart-labels { display: flex; justify-content: space-between; margin-top: 20px; font-size: 0.6rem; color: #666; text-transform: uppercase; }
+
+/* Quotes / Profiles */
+.quote-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 0; margin-top: 20px;
+}
+.quote-avatar { width: 40px; height: 40px; border-radius: 50%; background: #222; flex-shrink: 0; overflow:hidden;}
+.quote-avatar img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8;}
+.quote-content { flex: 1; }
+.quote-text { font-size: 1.1rem; font-weight: 300; color: #fff; line-height: 1.6; margin-bottom: 10px; font-style: italic;}
+.quote-author { font-size: 0.8rem; color: #fff; font-weight: 400;}
+.quote-role { font-size: 0.7rem; color: var(--text-muted); display: block; margin-top: 2px;}
+
+/* Section Layouts */
+.section { min-height: 90vh; display: flex; align-items: center; padding: 100px 0; position:relative; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+
+@media (max-width: 900px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 40px; }
+  .roadmap-nav { padding: 15px 20px; gap: 15px; overflow-x: auto; justify-content: flex-start; }
+  .roadmap-point:not(:last-child)::after { width: 40px; left: 40px; }
+}
+
+/* Utilities */
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.mt-50 { margin-top: 50px; }
+.mb-50 { margin-bottom: 50px; }
