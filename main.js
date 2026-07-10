@@ -166,7 +166,7 @@
       document.body.style.overflow = '';
       if (modalVideo) {
         modalVideo.pause();
-        modalVideo.src = 'filmy na strone/REAL_ESTATE_FILM.mp4';
+        modalVideo.src = 'filmy na strone/REEL2026.mp4';
         modalVideo.load();
         modalVideo.currentTime = 0;
       }
