@@ -699,7 +699,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: #000;
   cursor: pointer;
 }
 .modal-content {
