@@ -1935,12 +1935,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .modal-thumbnails-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-}
-
-.modal-thumb--hero {
-  grid-column: 1 / -1;
 }
 
 .modal-thumb {
@@ -2018,7 +2014,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* Modal responsive fixes */
+@media (max-width: 768px) {
+  .modal-thumbnails-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 480px) {
+  .modal-thumbnails-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .modal-player-container {
     padding: 30px 15px 15px;
   }
