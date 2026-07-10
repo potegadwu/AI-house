@@ -393,6 +393,151 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================
+   ABOUT / MANIFEST SECTION
+   ============================================ */
+.about-section {
+  padding: 140px 0;
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle left-edge orange glow behind the headline */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -120px;
+  width: 480px; height: 100%;
+  background: radial-gradient(ellipse at left center, rgba(232,80,10,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* --- LEFT COLUMN: headline --- */
+.about-headline-col {
+  position: sticky;
+  top: 140px;
+}
+
+.about-headline-col .section-tag {
+  margin-bottom: 32px;
+}
+
+.about-headline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.08;
+}
+
+.about-hl-1 {
+  font-family: var(--font-sans);
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  display: block;
+}
+
+.about-hl-sep {
+  font-family: var(--font-serif);
+  font-size: clamp(52px, 6vw, 88px);
+  font-weight: 400;
+  color: var(--orange);
+  line-height: 0.85;
+  display: block;
+  margin: 4px 0;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.about-hl-2 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  color: rgba(250,250,250,0.75);
+  display: block;
+  line-height: 1.2;
+}
+
+/* --- RIGHT COLUMN: body --- */
+.about-body-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 8px;
+}
+
+.about-p {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(250,250,250,0.65);
+  letter-spacing: 0.01em;
+}
+
+/* First paragraph — bigger, brighter */
+.about-p--lead {
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  line-height: 1.55;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(232,80,10,0.25);
+}
+
+/* Closing question — serif italic, orange accent */
+.about-p--closing {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--orange);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-left: 24px;
+}
+.about-p--closing::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px; bottom: 6px;
+  width: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .about-headline-col {
+    position: static;
+  }
+  .about-hl-1  { font-size: clamp(30px, 6vw, 48px); }
+  .about-hl-sep { font-size: clamp(44px, 9vw, 72px); }
+  .about-hl-2  { font-size: clamp(24px, 5vw, 38px); }
+}
+
+@media (max-width: 600px) {
+  .about-section { padding: 80px 0; }
+  .about-p--lead { font-size: 18px; }
+  .about-p--closing { font-size: 20px; padding-left: 18px; }
+}
+
+/* ============================================
    MODAL (demo reel)
    ============================================ */
 .modal {
