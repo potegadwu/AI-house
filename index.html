@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=16" />
+  <link rel="stylesheet" href="style.css?v=17" />
   <!-- SEO & AI Search (GEO) Meta Tags -->
   <link rel="canonical" href="https://films.madeby.agency/" />
   <meta property="og:title" content="AI House — Dom Produkcji AI | AI Production House" />
@@ -172,12 +172,12 @@
       },
       {
         "@type": "VideoObject",
-        "name": "Nieruchomości",
-        "description": "Prezentacja wideo: Nieruchomości.",
-        "uploadDate": "2024-09-22T08:00:00+02:00",
-        "contentUrl": "filmy na strone/REAL_ESTATE_FILM.mp4",
+        "name": "Reel 2026 - Tło",
+        "description": "Prezentacja wideo w tle: Reel 2026.",
+        "uploadDate": "2026-07-15T16:30:00+02:00",
+        "contentUrl": "filmy na strone/reel_2026_hero.mp4",
         "embedUrl": "https://madeby.agency/ai-house/",
-        "duration": "PT0M30S"
+        "duration": "PT1M7S"
       }
     ]
   }
@@ -216,8 +216,6 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#realizacje" id="navRealizacje" data-pl="Realizacje" data-en="Projects">Realizacje</a></li>
       <li><a href="uslugi.html" data-pl="Usługi" data-en="Services">Usługi</a></li>
-      <li><a href="#results" data-pl="Wyniki" data-en="Results">Wyniki</a></li>
-      <li><a href="#partners" data-pl="Partnerzy" data-en="Partners">Partnerzy</a></li>
       <li><a href="zalozyciele.html" data-pl="Założyciele" data-en="Founders">Założyciele</a></li>
       <li><a href="blog.html" data-pl="Blog" data-en="Blog">Blog</a></li>
       <li><a href="#contact" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
@@ -235,8 +233,9 @@
 
   <!-- ============ HERO ============ -->
   <section id="hero" class="hero">
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto">
-      <source src="filmy na strone/REAL_ESTATE_FILM.mp4" type="video/mp4" />
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="filmy na strone/reel_2026_hero_poster.jpg">
+      <source src="filmy na strone/reel_2026_hero.webm" type="video/webm" />
+      <source src="filmy na strone/reel_2026_hero.mp4" type="video/mp4" />
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -263,114 +262,16 @@
       <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
       <button class="modal-back-btn" id="modalBackBtn" data-pl="← powrót do strony głównej" data-en="← back to home page">← powrót do strony głównej</button>
       <div class="modal-player-container">
-        <video id="modalVideo" controls playsinline muted>
+        <video id="modalVideo" controls playsinline>
           <source src="filmy na strone/REEL2026.mp4" type="video/mp4" />
         </video>
-        
-        <div class="modal-thumbnails-title" data-pl="Wybierz wideo do obejrzenia" data-en="Select video to watch">Wybierz wideo do obejrzenia</div>
-        <div class="modal-thumbnails-wrapper">
-
-          <!-- ===== 2026 ===== -->
-          <div class="modal-year-label">2026</div>
-          <div class="modal-thumbnails-grid">
-
-            <!-- Reel 2026 — hero thumb, full row -->
-            <div class="modal-thumb active" data-src="filmy na strone/REEL2026.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/REEL2026.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Reel 2026" data-en="Reel 2026">Reel 2026</span>
-              </div>
-            </div>
-
-            <div class="modal-thumb" data-src="filmy na strone/PORSCHE.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/PORSCHE.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Porsche" data-en="Porsche">Porsche</span>
-              </div>
-            </div>
-
-            <div class="modal-thumb" data-src="filmy na strone/MODA.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/MODA.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Moda" data-en="Fashion">Moda</span>
-              </div>
-            </div>
-
-            <div class="modal-thumb" data-src="filmy na strone/BEAUTY_OLEJEK.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/BEAUTY_OLEJEK.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Beauty — Olejek" data-en="Beauty — Oil">Beauty — Olejek</span>
-              </div>
-            </div>
-
-            <div class="modal-thumb" data-src="filmy na strone/Skyliner lookup.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/Skyliner lookup.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Skyliner Lookup" data-en="Skyliner Lookup">Skyliner Lookup</span>
-              </div>
-            </div>
-
-          </div><!-- /2026 grid -->
-
-          <!-- ===== 2025 ===== -->
-          <div class="modal-year-label">2025</div>
-          <div class="modal-thumbnails-grid">
-
-            <div class="modal-thumb" data-src="filmy na strone/REAL_ESTATE_FILM.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/REAL_ESTATE_FILM.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Nieruchomości — Film" data-en="Real Estate — Film">Nieruchomości — Film</span>
-              </div>
-            </div>
-
-            <div class="modal-thumb" data-src="filmy na strone/REAL_ESTATE_APARTAMENT.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/REAL_ESTATE_APARTAMENT.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Apartament" data-en="Apartment">Apartament</span>
-              </div>
-            </div>
-
-            <div class="modal-thumb" data-src="filmy na strone/CYPRUS.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/CYPRUS.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Cypr" data-en="Cyprus">Cypr</span>
-              </div>
-            </div>
-
-            <div class="modal-thumb" data-src="filmy na strone/DENZA.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/DENZA.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Denza" data-en="Denza">Denza</span>
-              </div>
-            </div>
-
-            <div class="modal-thumb" data-src="filmy na strone/PHARMA_OTC_PODANIE LEKU.mp4">
-              <video class="modal-thumb-video" src="filmy na strone/PHARMA_OTC_PODANIE LEKU.mp4" preload="none" muted playsinline></video>
-              <div class="modal-thumb-overlay"><span class="play-icon">▶</span></div>
-              <div class="modal-thumb-info">
-                <span class="modal-thumb-name" data-pl="Pharma OTC" data-en="Pharma OTC">Pharma OTC</span>
-              </div>
-            </div>
-
-          </div><!-- /2025 grid -->
-        </div><!-- /modal-thumbnails-wrapper -->
-        </div><!-- modal-player-container -->
-      </div><!-- modal-content -->
-    </div><!-- modal-backdrop -->
-  </div><!-- reelModal -->
+      </div>
+    </div>
+  </div>
 
 
 
-  <!-- ============ ABOUT / MANIFEST ============ -->
+  <!-- ============ ABOUT / FILOZOFIA ============ -->
   <section id="about" class="section about-section">
     <div class="container">
 
@@ -384,48 +285,22 @@
         <div class="about-rule"></div>
       </div>
 
-      <!-- Body — 2 columns, 2 font sizes -->
+      <!-- Body — 2 columns -->
       <div class="about-body-grid">
         <div class="about-col-large">
-          <p data-pl="Tworzymy komercyjne kampanie z wykorzystaniem generatywnej AI od 2023 roku." data-en="We have been creating commercial campaigns using generative AI since 2023.">Tworzymy komercyjne kampanie z wykorzystaniem generatywnej AI od 2023 roku.</p>
-          <p data-pl="Łączymy ponad 20 lat doświadczenia w reklamie z technologią, która otworzyła przed markami zupełnie nowe możliwości produkcyjne." data-en="We combine over 20 years of advertising experience with technology that has opened up entirely new production possibilities for brands.">Łączymy ponad 20 lat doświadczenia w reklamie z technologią, która otworzyła przed markami zupełnie nowe możliwości produkcyjne.</p>
+          <p data-pl="Od 2023 roku tworzymy komercyjne kampanie z wykorzystaniem generatywnej AI, łącząc nowoczesną technologię z ponad 20-letnim doświadczeniem w reklamie. Budujemy światy bez tradycyjnych ograniczeń budżetowych, lokacyjnych czy scenograficznych." data-en="Since 2023, we have been creating commercial campaigns using generative AI, combining modern technology with over 20 years of experience in advertising. We build worlds without traditional budget, location, or set design constraints.">Od 2023 roku tworzymy komercyjne kampanie z wykorzystaniem generatywnej AI, łącząc nowoczesną technologię z ponad 20-letnim doświadczeniem w reklamie. Budujemy światy bez tradycyjnych ograniczeń budżetowych, lokacyjnych czy scenograficznych.</p>
         </div>
         <div class="about-col-small">
-          <p data-pl="Budujemy światy, których nie trzeba już ograniczać do dostępnego budżetu, lokacji czy scenografii." data-en="We build worlds that no longer need to be limited by available budget, location or set design.">Budujemy światy, których nie trzeba już ograniczać do dostępnego budżetu, lokacji czy scenografii.</p>
-          <p data-pl="Jednak nie zaczynamy od narzędzia." data-en="But we don't start from the tool.">Jednak nie zaczynamy od narzędzia.</p>
-        </div>
-      </div>
-
-      <!-- Closing question -->
-      <p class="about-closing" data-pl="Zaczynamy od pytania: co ma zobaczyć, poczuć i zapamiętać odbiorca?" data-en="We start with a question: what should the viewer see, feel and remember?">Zaczynamy od pytania: co ma zobaczyć, poczuć i zapamiętać odbiorca?</p>
-
-
-    </div>
-  </section>
-
-  <!-- ============ TEAM / CREATORS ============ -->
-  <section id="team" class="section team-section">
-    <div class="container">
-
-      <!-- Centered big statement -->
-      <div class="team-statement">
-        <p class="team-stmt-sup" data-pl="Technologia jest narzędziem" data-en="Technology is a tool">Technologia jest narzędziem</p>
-        <h2 class="team-stmt-headline" data-pl="Liczą się twórcy" data-en="Creators matter">Liczą się twórcy</h2>
-        <div class="team-stmt-rule"></div>
-      </div>
-
-      <!-- Prose — reversed columns: small/grey on left, larger/white on right -->
-      <div class="team-body-grid">
-        <div class="team-col-side">
           <p data-pl="Za jakość kreatywną MADEby AI House odpowiada Michał Kobierzewski — utytułowany dyrektor kreatywny, przez ponad 20 lat związany z czołowymi polskimi agencjami reklamowymi." data-en="Creative quality at MADEby AI House is overseen by Michał Kobierzewski — an award-winning creative director with over 20 years at Poland's leading advertising agencies.">Za jakość kreatywną MADEby AI House odpowiada Michał Kobierzewski — utytułowany dyrektor kreatywny, przez ponad 20 lat związany z czołowymi polskimi agencjami reklamowymi.</p>
-        </div>
-        <div class="team-col-main">
           <p data-pl="To właśnie doświadczenie reklamowe odróżnia efektowny eksperyment AI od filmu, który potrafi budować markę i sprzedawać." data-en="It is this advertising experience that separates a visually impressive AI experiment from a film that can truly build a brand and drive sales.">To właśnie doświadczenie reklamowe odróżnia efektowny eksperyment AI od filmu, który potrafi budować markę i sprzedawać.</p>
         </div>
       </div>
 
-      <!-- Split-color tagline -->
-      <div class="team-tagline">
+      <!-- Closing question -->
+      <p class="about-closing" data-pl="Zawsze zaczynamy od pytania: co odbiorca ma zobaczyć, poczuć i zapamiętać?" data-en="We always start with a question: what should the viewer see, feel, and remember?">Zawsze zaczynamy od pytania: co odbiorca ma zobaczyć, poczuć i zapamiętać?</p>
+
+      <!-- Tagline -->
+      <div class="team-tagline" style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 56px; margin-top: 64px;">
         <span class="team-tl-1" data-pl="Myślimy jak twórcy marek." data-en="We think like brand creators.">Myślimy jak twórcy marek.</span>
         <span class="team-tl-2" data-pl="Realizujemy jak dom produkcyjny." data-en="We deliver like a production house.">Realizujemy jak dom produkcyjny.</span>
       </div>
@@ -433,100 +308,166 @@
     </div>
   </section>
 
-  <!-- ============ RESULTS ============ -->
-  <section id="results" class="section results-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag light" data-pl="Efektywność" data-en="Effectiveness">Efektywność</div>
-        <h2 class="section-title light" data-pl="Nasze wyniki mówią same za siebie." data-en="Our results speak for themselves.">Nasze wyniki mówią same za siebie.</h2>
-      </div>
-
-      <div class="stats-big">
-        <div class="stat-item">
-          <div class="stat-num" data-value="70">0</div>
-          <div class="stat-label" data-pl="wyższe zaangażowanie odbiorców dzięki wideo AI" data-en="higher audience engagement with AI video content">wyższe zaangażowanie odbiorców dzięki wideo AI</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num" data-value="80">0</div>
-          <div class="stat-label" data-pl="bardziej dynamiczne i zapadające w pamięć materiały wizualne" data-en="more dynamic and memorable visual materials">bardziej dynamiczne i zapadające w pamięć materiały wizualne</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num" data-value="90">0</div>
-          <div class="stat-label" data-pl="wzrost siły marki dzięki narracji wizualnej AI" data-en="brand impact growth through AI visual storytelling">wzrost siły marki dzięki narracji wizualnej AI</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num stat-num--x" data-value="3">3x</div>
-          <div class="stat-label" data-pl="szybszy czas produkcji niż metody tradycyjne" data-en="faster production time than traditional methods">szybszy czas produkcji niż metody tradycyjne</div>
-        </div>
-      </div>
-
-      <div class="results-bars">
-        <div class="bar-item">
-          <div class="bar-label">
-            <span data-pl="Zaangażowanie odbiorców" data-en="Audience Engagement">Zaangażowanie odbiorców</span>
-            <span class="bar-pct">70%</span>
-          </div>
-          <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
-        </div>
-        <div class="bar-item">
-          <div class="bar-label">
-            <span data-pl="Dynamika materiałów wizualnych" data-en="Visual Dynamics">Dynamika materiałów wizualnych</span>
-            <span class="bar-pct">80%</span>
-          </div>
-          <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
-        </div>
-        <div class="bar-item">
-          <div class="bar-label">
-            <span data-pl="Siła marki" data-en="Brand Impact">Siła marki</span>
-            <span class="bar-pct">90%</span>
-          </div>
-          <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
-        </div>
-        <div class="bar-item">
-          <div class="bar-label">
-            <span data-pl="Skuteczność kampanii sprzedażowych" data-en="Sales Campaign Effectiveness">Skuteczność kampanii sprzedażowych</span>
-            <span class="bar-pct">65%</span>
-          </div>
-          <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
-        </div>
-      </div>
-      <p class="results-source">*Źródła: Wyzowl Video Marketing Report 2024, HubSpot State of Marketing 2024, Forrester Research</p>
-    </div>
+  <!-- ============ VIDEO DIVIDER ============ -->
+  <section class="video-divider-section" aria-label="Cinematic Divider">
+    <div class="video-divider-overlay"></div>
+    <video class="video-divider-video lazy-video" autoplay muted loop playsinline preload="none">
+      <source data-src="filmy na strone/PHARMA_OTC_PODANIE LEKU.mp4" type="video/mp4" />
+    </video>
   </section>
 
-
-
-  <!-- ============ PARTNERS ============ -->
-  <section id="partners" class="section partners-section">
+  <!-- ============ REALIZACJE (PORTFOLIO GRID) ============ -->
+  <section id="realizacje" class="section realizacje-section">
     <div class="container">
+      
+      <!-- Section Header -->
       <div class="section-header">
-        <div class="section-tag" data-pl="Ekosystem AI" data-en="AI Ecosystem">Ekosystem AI</div>
-        <h2 class="section-title" data-pl="Pracujemy z najlepszymi." data-en="We work with the best.">Pracujemy z najlepszymi.</h2>
+        <div class="section-tag" data-pl="Portfolio" data-en="Portfolio">Portfolio</div>
+        <h2 class="section-title" data-pl="Wybrane realizacje." data-en="Selected projects.">Wybrane realizacje.</h2>
       </div>
-      <div class="partners-track-wrap">
-        <div class="partners-track" id="partnersTrack">
-          <div class="partner-logo">OpenAI</div>
-          <div class="partner-logo">Midjourney</div>
-          <div class="partner-logo">RunwayML</div>
-          <div class="partner-logo">Pika Labs</div>
-          <div class="partner-logo">ElevenLabs</div>
-          <div class="partner-logo">Kling AI</div>
-          <div class="partner-logo">Sora</div>
-          <div class="partner-logo">HeyGen</div>
-          <div class="partner-logo">Adobe Firefly</div>
-          <div class="partner-logo">Stable Diffusion</div>
-          <!-- duplicate for seamless loop -->
-          <div class="partner-logo">OpenAI</div>
-          <div class="partner-logo">Midjourney</div>
-          <div class="partner-logo">RunwayML</div>
-          <div class="partner-logo">Pika Labs</div>
-          <div class="partner-logo">ElevenLabs</div>
-          <div class="partner-logo">Kling AI</div>
-          <div class="partner-logo">Sora</div>
-          <div class="partner-logo">HeyGen</div>
-          <div class="partner-logo">Adobe Firefly</div>
-          <div class="partner-logo">Stable Diffusion</div>
+
+      <!-- Filter Bar (Papaya style) -->
+      <div class="filter-bar-wrapper">
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all" data-pl="Wszystkie" data-en="All">Wszystkie</button>
+          <button class="filter-btn" data-filter="2026" data-pl="2026" data-en="2026">2026</button>
+          <button class="filter-btn" data-filter="2025" data-pl="2025" data-en="2025">2025</button>
         </div>
+      </div>
+
+      <!-- Projects Grid (Papaya style) -->
+      <div class="projects-grid" id="projectsGrid">
+        
+        <!-- Reel 2026 -->
+        <div class="project-card" data-year="2026" data-src="filmy na strone/REEL2026.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/REEL2026.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Showreel" data-en="Showreel">Showreel</span>, <span data-pl="MADEby AI House 2026" data-en="MADEby AI House 2026">MADEby AI House 2026</span></h3>
+          </div>
+        </div>
+
+        <!-- Porsche -->
+        <div class="project-card" data-year="2026" data-src="filmy na strone/PORSCHE.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/PORSCHE.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Porsche" data-en="Porsche">Porsche</span>, <span data-pl="Cyberpunk Dream" data-en="Cyberpunk Dream">Cyberpunk Dream</span></h3>
+          </div>
+        </div>
+
+        <!-- Moda -->
+        <div class="project-card" data-year="2026" data-src="filmy na strone/MODA.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/MODA.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Fashion" data-en="Fashion">Fashion</span>, <span data-pl="Neo-Gothic Runway" data-en="Neo-Gothic Runway">Neo-Gothic Runway</span></h3>
+          </div>
+        </div>
+
+        <!-- Beauty Oil -->
+        <div class="project-card" data-year="2026" data-src="filmy na strone/BEAUTY_OLEJEK.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/BEAUTY_OLEJEK.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Beauty" data-en="Beauty">Beauty</span>, <span data-pl="Olejek Różany" data-en="Rose Oil">Olejek Różany</span></h3>
+          </div>
+        </div>
+
+        <!-- Skyliner -->
+        <div class="project-card" data-year="2026" data-src="filmy na strone/Skyliner lookup.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/Skyliner lookup.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Real Estate" data-en="Real Estate">Real Estate</span>, <span data-pl="Skyliner Lookup" data-en="Skyliner Lookup">Skyliner Lookup</span></h3>
+          </div>
+        </div>
+
+        <!-- Real Estate Film -->
+        <div class="project-card" data-year="2025" data-src="filmy na strone/REAL_ESTATE_FILM.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/REAL_ESTATE_FILM.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Architektura" data-en="Architecture">Architektura</span>, <span data-pl="Prezentacja Premium" data-en="Premium Presentation">Prezentacja Premium</span></h3>
+          </div>
+        </div>
+
+        <!-- Apartment -->
+        <div class="project-card" data-year="2025" data-src="filmy na strone/REAL_ESTATE_APARTAMENT.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/REAL_ESTATE_APARTAMENT.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Design" data-en="Design">Design</span>, <span data-pl="Luksusowe Wnętrza" data-en="Luxury Interiors">Luksusowe Wnętrza</span></h3>
+          </div>
+        </div>
+
+        <!-- Cyprus -->
+        <div class="project-card" data-year="2025" data-src="filmy na strone/CYPRUS.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/CYPRUS.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Travel" data-en="Travel">Travel</span>, <span data-pl="Cypr Śródziemnomorski" data-en="Mediterranean Cyprus">Cypr Śródziemnomorski</span></h3>
+          </div>
+        </div>
+
+        <!-- Denza -->
+        <div class="project-card" data-year="2025" data-src="filmy na strone/DENZA.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/DENZA.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Automotive" data-en="Automotive">Automotive</span>, <span data-pl="Denza EV Showcase" data-en="Denza EV Showcase">Denza EV Showcase</span></h3>
+          </div>
+        </div>
+
+        <!-- Pharma OTC -->
+        <div class="project-card" data-year="2025" data-src="filmy na strone/PHARMA_OTC_PODANIE LEKU.mp4">
+          <div class="thumbnail">
+            <video class="lazy-video" autoplay muted loop playsinline preload="none">
+              <source data-src="filmy na strone/PHARMA_OTC_PODANIE LEKU.mp4" type="video/mp4" />
+            </video>
+            <div class="thumb-overlay" data-pl="Zobacz" data-en="View">Zobacz</div>
+          </div>
+          <div class="meta">
+            <h3><span class="text-cap" data-pl="Pharma" data-en="Pharma">Pharma</span>, <span data-pl="Podanie Leku" data-en="OTC Presentation">Podanie Leku</span></h3>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -580,7 +521,7 @@
     <div class="container">
       <div class="madeby-banner-inner">
         <div class="madeby-banner-img-wrap">
-          <img src="founders/zalozyciele.webp" alt="Założyciele MADEby.agency" class="madeby-banner-image">
+          <img src="founders/zalozyciele.webp?v=2" alt="Założyciele MADEby.agency" class="madeby-banner-image">
         </div>
         <div class="madeby-banner-content">
           <div class="section-tag" data-pl="Think-Tank marek premium" data-en="Premium Brand Think-Tank">Think-Tank marek premium</div>
@@ -619,6 +560,6 @@
   <button id="backToTop" class="back-to-top" aria-label="Wróć na górę">↑</button>
 
   <script src="blog-data.js?v=8"></script>
-  <script src="main.js?v=10"></script>
+  <script src="main.js?v=11"></script>
 </body>
 </html>

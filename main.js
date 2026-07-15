@@ -149,16 +149,25 @@
     const closeBtn = $('#modalClose');
     const watchBtn = $('#watchReelBtn');
     const modalVideo = $('#modalVideo');
-    const thumbs = $$('.modal-thumb');
+    const cards = $$('.project-card');
     if (!modal) return;
 
-    function openModal() {
+    function openModalWithSrc(src) {
+      if (modalVideo && src) {
+        modalVideo.src = src;
+        modalVideo.load();
+        modalVideo.currentTime = 0;
+        
+        // Start playing
+        modalVideo.muted = false; // play with sound in the modal!
+        modalVideo.play().catch(() => {});
+
+        // Update URL hash
+        const filename = src.split('/').pop().replace('.mp4', '');
+        history.replaceState(null, null, '#video=' + encodeURIComponent(filename));
+      }
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
-      if (modalVideo) {
-        modalVideo.muted = true; // start muted initially so user can unmute manually
-        modalVideo.play().catch(() => {});
-      }
     }
 
     function closeModal() {
@@ -170,79 +179,32 @@
         modalVideo.load();
         modalVideo.currentTime = 0;
       }
-      thumbs.forEach((t, idx) => {
-        if (idx === 0) t.classList.add('active');
-        else t.classList.remove('active');
-      });
       // Clear hash on close
-      if (window.location.hash.startsWith('#video=')) {
-        history.pushState(null, null, window.location.pathname + window.location.search);
-      }
+      history.pushState(null, null, window.location.pathname + window.location.search);
     }
 
     const backBtn = $('#modalBackBtn');
-    const navRealizacjeBtn = $('#navRealizacje');
 
-    function playNextVideo() {
-      let activeIdx = -1;
-      thumbs.forEach((t, i) => {
-        if (t.classList.contains('active')) activeIdx = i;
-      });
-      const nextIdx = (activeIdx + 1) % thumbs.length;
-      const nextThumb = thumbs[nextIdx];
-      if (nextThumb) {
-        nextThumb.click();
-      }
-    }
-
-    if (watchBtn) watchBtn.addEventListener('click', openModal);
-    if (navRealizacjeBtn) {
-      navRealizacjeBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
+    if (watchBtn) {
+      watchBtn.addEventListener('click', () => {
+        openModalWithSrc('filmy na strone/REEL2026.mp4');
       });
     }
-    if (closeBtn) closeBtn.addEventListener('click', playNextVideo);
+
+    // Set click handlers on each project card
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const src = card.getAttribute('data-src');
+        if (src) openModalWithSrc(src);
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
     if (backBtn) backBtn.addEventListener('click', closeModal);
     if (backdrop) backdrop.addEventListener('click', closeModal);
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeModal();
-    });
-
-    // Thumbnails logic (hover to play preview, click to select video)
-    thumbs.forEach(thumb => {
-      const thumbVideo = thumb.querySelector('.modal-thumb-video');
-      
-      if (thumbVideo) {
-        let playTimeout;
-        thumb.addEventListener('mouseenter', () => {
-          playTimeout = setTimeout(() => {
-            thumbVideo.play().catch(() => {});
-          }, 200);
-        });
-        thumb.addEventListener('mouseleave', () => {
-          clearTimeout(playTimeout);
-          thumbVideo.pause();
-          thumbVideo.currentTime = 0;
-        });
-      }
-
-      thumb.addEventListener('click', () => {
-        const src = thumb.getAttribute('data-src');
-        if (modalVideo && src) {
-          modalVideo.src = src;
-          modalVideo.load();
-          modalVideo.currentTime = 0;
-          modalVideo.play().catch(() => {});
-          
-          // Update URL hash
-          const filename = src.split('/').pop().replace('.mp4', '');
-          history.replaceState(null, null, '#video=' + encodeURIComponent(filename));
-        }
-        thumbs.forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-      });
     });
 
     // Handle load hash
@@ -252,23 +214,47 @@
         const videoName = decodeURIComponent(hash.replace('#video=', ''));
         const targetSrc = `filmy na strone/${videoName}.mp4`;
         let found = false;
-        thumbs.forEach(t => {
-          if (t.getAttribute('data-src') === targetSrc) {
-            t.click();
+        cards.forEach(card => {
+          if (card.getAttribute('data-src') === targetSrc) {
+            openModalWithSrc(targetSrc);
             found = true;
           }
         });
-        if (found && !modal.classList.contains('open')) {
-          openModal();
+        if (!found && videoName === 'REEL2026') {
+          openModalWithSrc('filmy na strone/REEL2026.mp4');
         }
-      } else if (hash === '#realizacje' && !modal.classList.contains('open')) {
-        history.replaceState(null, null, window.location.pathname + window.location.search);
-        openModal();
       }
     }
     
     // Check hash initially
-    setTimeout(checkHash, 100);
+    setTimeout(checkHash, 150);
+  }
+
+  /* ============================================
+     PORTFOLIO FILTERS (PAPAYA STYLE)
+     ============================================ */
+  function initPortfolioFilters() {
+    const filterBtns = $$('.filter-btn');
+    const cards = $$('.project-card');
+    if (!filterBtns.length) return;
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          const year = card.getAttribute('data-year');
+          if (filter === 'all' || year === filter) {
+            card.classList.remove('hide');
+          } else {
+            card.classList.add('hide');
+          }
+        });
+      });
+    });
   }
 
   /* ============================================
@@ -648,6 +634,29 @@
     });
   }
 
+  function initLazyVideos() {
+    const lazyVideos = $$('video.lazy-video');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const video = entry.target;
+            $$('source', video).forEach(source => {
+              const src = source.getAttribute('data-src');
+              if (src) source.src = src;
+            });
+            video.load();
+            video.play().catch(err => console.log("Lazy play failed:", err));
+            video.classList.remove('lazy-video');
+            obs.unobserve(video);
+          }
+        });
+      }, { rootMargin: '0px 0px 300px 0px' });
+
+      lazyVideos.forEach(v => observer.observe(v));
+    }
+  }
+
   /* ============================================
      INIT ALL
      ============================================ */
@@ -656,6 +665,7 @@
     initNavbar();
     initHamburger();
     initModal();
+    initPortfolioFilters();
     initScrollReveal();
     initCounters();
     initBars();
@@ -663,6 +673,7 @@
     initBlogReader();
     initContactForm();
     initHeroVideo();
+    initLazyVideos();
     initSmoothScroll();
     initActiveNav();
     initBackToTop();

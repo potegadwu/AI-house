@@ -545,6 +545,42 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================
+   VIDEO DIVIDER SECTION (CINEMATIC BREAK)
+   ============================================ */
+.video-divider-section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  background: var(--black);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.video-divider-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  display: block;
+}
+
+.video-divider-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.5) 0%, transparent 15%, transparent 85%, rgba(8,8,8,0.5) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .video-divider-section {
+    height: 50vh;
+  }
+}
+
+/* ============================================
    TEAM / CREATORS SECTION
    ============================================ */
 .team-section {
@@ -2374,9 +2410,173 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
 }
 
-@media (max-width: 600px) {
-  .svc-hero { padding: 60px 0 72px; }
-  .svc-hero-headline { font-size: 32px; }
-  .svc-title { font-size: 26px; }
-  .svc-block { padding: 48px 0; }
 }
+
+/* ============================================
+   REALIZACJE (PORTFOLIO GRID) - PAPAYA STYLE
+   ============================================ */
+.realizacje-section {
+  background: var(--black);
+  padding: 100px 0 120px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.filter-bar-wrapper {
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  padding: 10px 24px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.filter-btn:active {
+  transform: translateY(1px);
+}
+
+.filter-btn.active {
+  background: var(--black);
+  color: var(--white);
+  box-shadow: none;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+  width: 100%;
+}
+
+/* Project Card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.project-card.hide {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.project-card .thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: #0f0f0f;
+}
+
+.project-card .thumbnail video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover overlay */
+.project-card .thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0;
+  z-index: 5;
+  transition: opacity 0.12s ease-in-out;
+}
+
+.project-card:hover .thumb-overlay {
+  opacity: 1;
+}
+
+/* Meta description below thumbnail */
+.project-card .meta h3 {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.4;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.project-card .meta h3 .text-cap {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--orange);
+  letter-spacing: 0.05em;
+}
+
+/* Responsiveness for grid */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 20px;
+  }
+  .realizacje-section {
+    padding: 80px 0 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .realizacje-section {
+    padding: 60px 0 80px;
+  }
+  .filter-bar {
+    gap: 8px;
+  }
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+}
+
