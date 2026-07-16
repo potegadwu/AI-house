@@ -2592,10 +2592,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 0 40px;
 }
 .video-showcase-section video {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
+  max-height: 80vh;
   display: block;
   border-radius: 12px;
+  margin: 0 auto;
 }
 @media (max-width: 1024px) {
   .video-showcase-section {
