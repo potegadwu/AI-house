@@ -60,6 +60,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .section {
   padding: 80px 0;
+  scroll-margin-top: 120px;
 }
 
 /* ============================================
