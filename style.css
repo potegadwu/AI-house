@@ -1,4 +1,4 @@
-﻿/* ============================================
+/* ============================================
    AI HOUSE — MADEby.agency
    Premium One-Pager CSS
    ============================================ */
@@ -1367,6 +1367,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .footer-inner {
+  max-width: none;
   display: flex;
   align-items: center;
   justify-content: space-between;

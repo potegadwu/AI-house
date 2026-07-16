@@ -651,7 +651,7 @@
             obs.unobserve(video);
           }
         });
-      }, { rootMargin: '0px 0px 300px 0px' });
+      }, { rootMargin: '1000px' });
 
       lazyVideos.forEach(v => observer.observe(v));
     }
