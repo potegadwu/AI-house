@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    AI HOUSE — MADEby.agency
    Premium One-Pager CSS
    ============================================ */
@@ -433,7 +433,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* Line 1: bold sans, massive */
 .about-hl-sans {
   font-family: var(--font-sans);
-  font-size: clamp(30px, 4vw, 56px);
+  font-size: clamp(34px, 4.5vw, 64px);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.0;
@@ -2605,8 +2605,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .nav-links li { list-style: none !important; display: block; }
 
-
-
 /* ============================================
    SOUND TOGGLE BUTTON
    ============================================ */
@@ -2614,8 +2612,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: absolute;
   bottom: 40px;
   right: 40px;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
@@ -2624,7 +2622,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 100;
   transition: all 0.3s ease;
   color: var(--white);
   cursor: pointer;
@@ -2636,8 +2634,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--orange);
 }
 .sound-icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 .sound-icon.hidden {
   display: none;
@@ -2646,11 +2644,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .sound-toggle-btn {
     bottom: 24px;
     right: 24px;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
   .sound-icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
 }
