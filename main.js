@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    AI HOUSE — MADEby.agency
    Main JavaScript
    ============================================ */
@@ -698,7 +698,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (soundToggle && heroVideo) {
     // Set a gentle initial volume in case it's unmuted
-    heroVideo.volume = 0.2; 
+    heroVideo.volume = 0.5; 
     
     soundToggle.addEventListener('click', () => {
       if (heroVideo.muted) {
