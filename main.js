@@ -175,7 +175,7 @@
       document.body.style.overflow = '';
       if (modalVideo) {
         modalVideo.pause();
-        modalVideo.src = 'filmy na strone/REEL2026.mp4';
+        modalVideo.src = 'filmy na strone/REEL_2026_MADEby_FIN__.mp4';
         modalVideo.load();
         modalVideo.currentTime = 0;
       }
@@ -187,7 +187,7 @@
 
     if (watchBtn) {
       watchBtn.addEventListener('click', () => {
-        openModalWithSrc('filmy na strone/REEL2026.mp4');
+        openModalWithSrc('filmy na strone/REEL_2026_MADEby_FIN__.mp4');
       });
     }
 
@@ -220,8 +220,8 @@
             found = true;
           }
         });
-        if (!found && videoName === 'REEL2026') {
-          openModalWithSrc('filmy na strone/REEL2026.mp4');
+        if (!found && videoName === 'REEL_2026_MADEby_FIN__') {
+          openModalWithSrc('filmy na strone/REEL_2026_MADEby_FIN__.mp4');
         }
       }
     }
