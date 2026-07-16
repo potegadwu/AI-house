@@ -284,7 +284,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero-title {
   font-family: var(--font-sans);
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: clamp(36px, 5.5vw, 72px);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -433,7 +433,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* Line 1: bold sans, massive */
 .about-hl-sans {
   font-family: var(--font-sans);
-  font-size: clamp(38px, 5vw, 72px);
+  font-size: clamp(30px, 4vw, 56px);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.0;
@@ -443,7 +443,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* Line 2: serif italic, slightly smaller, orange-warm */
 .about-hl-serif {
   font-family: var(--font-serif);
-  font-size: clamp(30px, 4vw, 56px);
+  font-size: clamp(28px, 3.5vw, 50px);
   font-weight: 700;
   font-style: italic;
   letter-spacing: -0.01em;
@@ -622,7 +622,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .team-stmt-headline {
   font-family: var(--font-sans);
-  font-size: clamp(48px, 7.5vw, 104px);
+  font-size: clamp(42px, 7vw, 92px);
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 0.95;
@@ -708,7 +708,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     border-bottom: 1px solid rgba(255,255,255,0.06);
     padding-bottom: 32px;
   }
-  .team-stmt-headline { font-size: clamp(40px, 9vw, 72px); }
+  .team-stmt-headline { font-size: clamp(36px, 8vw, 64px); }
 }
 @media (max-width: 600px) {
   .team-section { padding: 80px 0 100px; }
@@ -816,7 +816,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .section-title {
-  font-size: clamp(34px, 4.5vw, 60px);
+  font-size: clamp(30px, 4vw, 54px);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -843,7 +843,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .about-headline {
-  font-size: clamp(26px, 3.8vw, 48px);
+  font-size: clamp(24px, 3.5vw, 44px);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.1;
@@ -1039,7 +1039,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .stat-num {
-  font-size: clamp(52px, 5.5vw, 80px);
+  font-size: clamp(48px, 5vw, 72px);
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 1;
@@ -1052,7 +1052,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* 3x variant — no animation, just static display */
 .stat-num--x {
-  font-size: clamp(52px, 5.5vw, 80px);
+  font-size: clamp(48px, 5vw, 72px);
 }
 
 .stat-label {
@@ -1279,7 +1279,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: start;
 }
 
-.contact-text .section-title { font-size: clamp(28px, 3.8vw, 48px); }
+.contact-text .section-title { font-size: clamp(26px, 3.5vw, 44px); }
 .contact-sub {
   margin-top: 20px;
   font-size: 15px;
@@ -1736,7 +1736,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   .blog-reader-title {
     font-family: var(--font-sans);
-    font-size: clamp(30px, 3.8vw, 52px);
+    font-size: clamp(28px, 3.5vw, 48px);
     font-weight: 900;
     letter-spacing: -0.03em;
     line-height: 1.15;
@@ -2137,7 +2137,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .madeby-banner-content .section-title {
   font-family: var(--font-sans);
-  font-size: clamp(26px, 2.8vw, 38px);
+  font-size: clamp(24px, 2.5vw, 34px);
   font-weight: 800;
   color: var(--white);
   line-height: 1.2;
@@ -2169,7 +2169,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .svc-hero-headline {
   font-family: var(--font-sans);
-  font-size: clamp(34px, 4.5vw, 64px);
+  font-size: clamp(30px, 4vw, 56px);
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 1.0;
@@ -2248,7 +2248,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .svc-title {
   font-family: var(--font-sans);
-  font-size: clamp(24px, 2.8vw, 40px);
+  font-size: clamp(22px, 2.5vw, 36px);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -2604,4 +2604,5 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .nav-links li { list-style: none !important; display: block; }
+
 
