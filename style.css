@@ -127,6 +127,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Nav links */
 .nav-links {
+  list-style: none !important;
   display: flex;
   gap: 36px;
   align-items: center;
@@ -1544,7 +1545,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     width: 20px !important;
   }
 
-  .nav-links { display: none; }
+  .nav-links {
+  list-style: none !important; display: none; }
   .nav-cta { display: none; }
   .hamburger { display: flex; }
 
@@ -2600,3 +2602,5 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     padding: 0 24px;
   }
 }
+
+.nav-links li { list-style: none !important; display: block; }
