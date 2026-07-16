@@ -56,7 +56,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .section {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 /* ============================================
@@ -416,7 +416,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ---- HEADLINE ---- */
 .about-intro {
   max-width: 960px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .about-intro .section-tag {
@@ -465,7 +465,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   grid-template-columns: 5fr 4fr;
   gap: 64px 80px;
   align-items: start;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 /* LEFT col — larger text, brighter */
@@ -812,7 +812,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .section-header {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .section-title {
@@ -1028,7 +1028,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   grid-template-columns: repeat(4, 1fr);
   gap: 2px;
   background: var(--grey-2);
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .stat-item {
@@ -1504,7 +1504,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 @media (max-width: 1024px) {
   .container { padding: 0 24px; }
-  .section { padding: 80px 0; }
+  .section { padding: 50px 0; }
 
   #navbar {
     height: 80px !important;
@@ -1594,7 +1594,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .founder-card { padding: 40px 24px; }
   .stats-big { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
-  .btn-primary, .btn-ghost { width: 100%; text-align: center; }
+  .btn-primary, .btn-ghost { width: max-content; padding: 12px 32px; font-size: 11px; text-align: center; margin: 0 auto; }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-right { order: 1; }
   .footer-copy { order: 2; }
@@ -2188,7 +2188,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ---- BLOCKS WRAPPER ---- */
 .svc-blocks {
-  padding: 0 0 120px;
+  padding: 0 0 60px;
   background: var(--black);
 }
 
@@ -2197,7 +2197,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 0 80px;
-  padding: 80px 0;
+  padding: 40px 0;
   border-bottom: 1px solid rgba(255,255,255,0.05);
   align-items: start;
 }
@@ -2243,7 +2243,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .svc-block-body {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .svc-title {
@@ -2398,8 +2398,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (max-width: 860px) {
   .svc-block {
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 60px 0;
+    gap: 16px;
+    padding: 30px 0;
   }
   .svc-block-header {
     position: static;
@@ -2588,7 +2588,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .video-showcase-section {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 20px auto;
   padding: 0 40px;
 }
 .video-showcase-section video {
