@@ -2580,3 +2580,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
 }
 
+/* ============================================
+   VIDEO SHOWCASE (USLUGI)
+   ============================================ */
+.video-showcase-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 40px;
+}
+.video-showcase-section video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+@media (max-width: 1024px) {
+  .video-showcase-section {
+    padding: 0 24px;
+  }
+}
