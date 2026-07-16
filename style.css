@@ -2630,6 +2630,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--white);
   cursor: pointer;
 }
+.sound-toggle-btn.is-unmuted {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
 .sound-toggle-btn:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: scale(1.05);
