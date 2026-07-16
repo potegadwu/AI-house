@@ -2606,3 +2606,51 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav-links li { list-style: none !important; display: block; }
 
 
+
+/* ============================================
+   SOUND TOGGLE BUTTON
+   ============================================ */
+.sound-toggle-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  color: var(--white);
+  cursor: pointer;
+}
+.sound-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.sound-icon {
+  width: 20px;
+  height: 20px;
+}
+.sound-icon.hidden {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sound-toggle-btn {
+    bottom: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+  }
+  .sound-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

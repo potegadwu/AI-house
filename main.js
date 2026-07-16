@@ -686,3 +686,30 @@
   }
 
 })();
+
+/* ============================================
+   HERO VIDEO SOUND TOGGLE
+   ============================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  const soundToggle = document.getElementById('soundToggle');
+  const heroVideo = document.getElementById('heroVideo');
+  const iconMuted = document.getElementById('iconMuted');
+  const iconUnmuted = document.getElementById('iconUnmuted');
+
+  if (soundToggle && heroVideo) {
+    // Set a gentle initial volume in case it's unmuted
+    heroVideo.volume = 0.2; 
+    
+    soundToggle.addEventListener('click', () => {
+      if (heroVideo.muted) {
+        heroVideo.muted = false;
+        iconMuted.classList.add('hidden');
+        iconUnmuted.classList.remove('hidden');
+      } else {
+        heroVideo.muted = true;
+        iconMuted.classList.remove('hidden');
+        iconUnmuted.classList.add('hidden');
+      }
+    });
+  }
+});
