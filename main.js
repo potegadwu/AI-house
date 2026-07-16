@@ -718,5 +718,17 @@ document.addEventListener('DOMContentLoaded', () => {
         soundToggle.classList.remove('is-unmuted');
       }
     });
+
+    // Auto-mute on scroll for mobile devices
+    window.addEventListener('scroll', () => {
+      if (window.innerWidth <= 768 && window.scrollY > 50) {
+        if (!heroVideo.muted) {
+          heroVideo.muted = true;
+          iconMuted.classList.remove('hidden');
+          iconUnmuted.classList.add('hidden');
+          soundToggle.classList.remove('is-unmuted');
+        }
+      }
+    }, { passive: true });
   }
 });
