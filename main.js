@@ -440,6 +440,11 @@
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
 
       const originalText = submitBtn.textContent;
       submitBtn.textContent = currentLang === 'pl' ? 'Wysyłam…' : 'Sending…';
