@@ -1190,9 +1190,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 9px 20px;
-  border: 1px solid var(--grey-3);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 2px;
-  color: var(--grey-1);
+  color: rgba(255,255,255,0.70);
   transition: all var(--transition);
 }
 .cat-btn:hover, .cat-btn.active {
@@ -1209,15 +1209,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .blog-card {
-  background: var(--black);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 40px 36px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  transition: background var(--transition);
+  transition: all var(--transition);
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  border-radius: 4px;
 }
 .blog-card::after {
   content: '↗';
@@ -1229,7 +1231,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: translate(-4px, 4px);
   transition: all var(--transition);
 }
-.blog-card:hover { background: var(--black-2); }
+.blog-card:hover { 
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+}
 .blog-card:hover::after {
   opacity: 1;
   transform: translate(0, 0);
