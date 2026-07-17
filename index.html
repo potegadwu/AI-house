@@ -224,11 +224,8 @@
 
   <!-- ============ HERO ============ -->
   <section id="hero" class="hero">
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="filmy na strone/reel_2026_hero_poster.jpg">
-      
-      <source src="filmy na strone/reel_2026_hero_with_audio.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-overlay"></div>
+    
+    
     <button id="soundToggle" class="sound-toggle-btn" aria-label="Włącz/wyłącz dźwięk">
       <svg id="iconMuted" class="sound-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -275,7 +272,8 @@
 
 
   <!-- ============ ABOUT / FILOZOFIA ============ -->
-  <section id="about" class="section about-section">
+  <section id="about" class="section about-section" style="position: relative; overflow: hidden;">
+    <div class="orange-sphere"></div>
     <div class="container">
 
       <!-- Headline block — full width -->
@@ -305,19 +303,13 @@
       <!-- Tagline -->
       <div class="team-tagline" style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 56px; margin-top: 64px;">
         <span class="team-tl-1" data-pl="Myślimy jak twórcy marek." data-en="We think like brand creators.">Myślimy jak twórcy marek.</span>
-        <span class="team-tl-2" data-pl="Realizujemy jak dom produkcyjny." data-en="We deliver like a production house.">Realizujemy jak dom produkcyjny.</span>
+        <span class="team-tl-2" data-pl="Realizujemy jak filmowcy." data-en="We deliver like a production house.">Realizujemy jak filmowcy.</span>
       </div>
 
     </div>
   </section>
 
-  <!-- ============ VIDEO DIVIDER ============ -->
-  <section class="video-divider-section" aria-label="Cinematic Divider">
-    <div class="video-divider-overlay"></div>
-    <video class="video-divider-video lazy-video-removed" autoplay muted loop playsinline preload="auto" poster="filmy na strone/OTC_FEVER_26_poster.jpg">
-      <source src="filmy na strone/OTC_FEVER_26.mp4" type="video/mp4" />
-    </video>
-  </section>
+  
 
   <!-- ============ REALIZACJE (PORTFOLIO GRID) ============ -->
   <section id="realizacje" class="section realizacje-section">

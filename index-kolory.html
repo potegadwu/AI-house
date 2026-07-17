@@ -226,6 +226,58 @@
 body {
   background-color: #121123;
 }
+
+/* Transparent navbar by default */
+#navbar {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+/* 50% transparent gradient on scroll */
+#navbar.scrolled {
+  background: linear-gradient(105deg, rgba(14,101,93,0.5) 0%, rgba(18,17,35,0.5) 50%, rgba(48,16,81,0.5) 100%) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+/* Orange sphere pushed to the bottom right */
+.orange-sphere {
+  position: absolute;
+  top: 85%;
+  right: -15vw;
+  width: 50vw;
+  height: 50vw;
+  max-width: 800px;
+  max-height: 800px;
+  background-color: #E85D22;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+/* Make text elements sit above the sphere */
+.about-col-small,
+.about-closing {
+  position: relative;
+  z-index: 2;
+}
+
+/* Centered tagline with white text for contrast over the sphere */
+.team-tagline {
+  position: relative;
+  z-index: 2;
+  text-align: center !important;
+  justify-content: center !important;
+  border-top: none !important;
+  padding-top: 40px !important;
+  margin-top: 40px !important;
+  padding-bottom: 80px !important;
+}
+.team-tl-2 {
+  color: white !important;
+}
+
 </style>
 </head>
 <body>
@@ -257,11 +309,8 @@ body {
   <!-- ============ HERO ============ -->
   <div class="hero-wrapper">
   <section id="hero" class="hero">
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="filmy na strone/reel_2026_hero_poster.jpg">
-      
-      <source src="filmy na strone/reel_2026_hero_with_audio.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-overlay"></div>
+    
+    
     <button id="soundToggle" class="sound-toggle-btn" aria-label="Włącz/wyłącz dźwięk">
       <svg id="iconMuted" class="sound-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -308,7 +357,8 @@ body {
 
 
   <!-- ============ ABOUT / FILOZOFIA ============ -->
-  <section id="about" class="section about-section">
+  <section id="about" class="section about-section" style="position: relative; overflow: hidden;">
+    <div class="orange-sphere"></div>
     <div class="container">
 
       <!-- Headline block — full width -->
@@ -336,9 +386,9 @@ body {
       <p class="about-closing" data-pl="Zawsze zaczynamy od pytania: co odbiorca ma zobaczyć, poczuć i zapamiętać?" data-en="We always start with a question: what should the viewer see, feel, and remember?">Zawsze zaczynamy od pytania: co odbiorca ma zobaczyć, poczuć i zapamiętać?</p>
 
       <!-- Tagline -->
-      <div class="team-tagline" style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 56px; margin-top: 64px;">
+      <div class="team-tagline">
         <span class="team-tl-1" data-pl="Myślimy jak twórcy marek." data-en="We think like brand creators.">Myślimy jak twórcy marek.</span>
-        <span class="team-tl-2" data-pl="Realizujemy jak dom produkcyjny." data-en="We deliver like a production house.">Realizujemy jak dom produkcyjny.</span>
+        <span class="team-tl-2" data-pl="Realizujemy jak filmowcy." data-en="We deliver like filmmakers.">Realizujemy jak filmowcy.</span>
       </div>
 
     </div>
@@ -346,13 +396,7 @@ body {
 
   </div>
 
-  <!-- ============ VIDEO DIVIDER ============ -->
-  <section class="video-divider-section" aria-label="Cinematic Divider">
-    <div class="video-divider-overlay"></div>
-    <video class="video-divider-video lazy-video-removed" autoplay muted loop playsinline preload="auto" poster="filmy na strone/OTC_FEVER_26_poster.jpg">
-      <source src="filmy na strone/OTC_FEVER_26.mp4" type="video/mp4" />
-    </video>
-  </section>
+  
 
   <!-- ============ REALIZACJE (PORTFOLIO GRID) ============ -->
   <div class="realizacje-wrapper">

@@ -2665,3 +2665,26 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     height: 20px;
   }
 }
+
+
+/* Orange sphere pushed to the bottom right */
+.orange-sphere {
+  position: absolute;
+  top: 85%;
+  right: -15vw;
+  width: 50vw;
+  height: 50vw;
+  max-width: 800px;
+  max-height: 800px;
+  background-color: #E85D22;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.about-col-small,
+.about-closing,
+.team-tagline {
+  position: relative;
+  z-index: 2;
+}
