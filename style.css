@@ -2724,3 +2724,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .footer-wrapper .footer {
   background: transparent !important;
 }
+
+
+/* Subpages continuous gradient layout */
+body.subpage {
+  background: linear-gradient(105deg, #0E655D 0%, #121123 50%, #301051 100%) !important;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+body.subpage .svc-hero,
+body.subpage .svc-blocks,
+body.subpage .video-showcase-section,
+body.subpage .footer,
+body.subpage .about-section,
+body.subpage .section,
+body.subpage .madeby-banner,
+body.subpage .blog-section {
+  background: transparent !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+body.subpage .svc-block--alt {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
