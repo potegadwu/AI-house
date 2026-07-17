@@ -75,6 +75,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================ */
 #navbar {
   position: fixed;
+  background: transparent;
+  border-bottom: none;
   top: 0; left: 0; right: 0;
   z-index: 1000;
   height: var(--nav-h);
@@ -86,10 +88,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 #navbar.scrolled {
-  background: rgba(8,8,8,0.92);
+  background: linear-gradient(105deg, rgba(14,101,93,0.5) 0%, rgba(18,17,35,0.5) 50%, rgba(48,16,81,0.5) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(232,80,10,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   height: 110px;
 }
 
@@ -236,6 +238,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    HERO
    ============================================ */
 .hero {
+  background: linear-gradient(105deg, #0E655D 0%, #121123 50%, #301051 100%);
   position: relative;
   height: 100vh;
   min-height: 640px;
@@ -697,7 +700,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .team-tl-2 {
-  color: var(--orange);
+  color: var(--white);
 }
 
 /* ---- RESPONSIVE ---- */
@@ -1365,7 +1368,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    FOOTER
    ============================================ */
 .footer {
-  background: var(--black);
+  background: linear-gradient(110deg, #071113 0%, #100D1E 55%, #260E3E 100%);
   border-top: 1px solid var(--grey-3);
   padding: 40px 0;
 }
@@ -1513,8 +1516,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   #navbar {
     height: 80px !important;
-    background: #080808 !important;
-    border-bottom: 1px solid rgba(232, 80, 10, 0.15) !important;
+    background: transparent !important;
+    border-bottom: none !important;
     padding: 0 24px !important;
     z-index: 3000 !important;
   }
@@ -2164,7 +2167,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ---- HERO ---- */
 .svc-hero {
   padding: 80px 0 100px;
-  background: var(--black);
+  background: linear-gradient(105deg, #0E655D 0%, #121123 50%, #301051 100%);
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -2423,7 +2426,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    REALIZACJE (PORTFOLIO GRID) - PAPAYA STYLE
    ============================================ */
 .realizacje-section {
-  background: var(--black);
+  background: linear-gradient(95deg, #0B514C 0%, #151126 48%, #3A1260 100%);
   padding: 100px 0 120px;
   border-top: 1px solid rgba(255,255,255,0.04);
 }
@@ -2687,4 +2690,37 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .team-tagline {
   position: relative;
   z-index: 2;
+}
+
+
+/* Gradients for wrappers on index pages */
+.hero-wrapper {
+  background: linear-gradient(105deg, #0E655D 0%, #121123 50%, #301051 100%) !important;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.realizacje-wrapper {
+  background: linear-gradient(95deg, #0B514C 0%, #151126 48%, #3A1260 100%) !important;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.footer-wrapper {
+  background: linear-gradient(110deg, #071113 0%, #100D1E 55%, #260E3E 100%) !important;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* Make sections transparent if inside a wrapper */
+.hero-wrapper .hero, 
+.hero-wrapper .about-section, 
+.realizacje-wrapper .realizacje-section, 
+.footer-wrapper .contact-section, 
+.footer-wrapper .madeby-banner, 
+.footer-wrapper .footer {
+  background: transparent !important;
 }
