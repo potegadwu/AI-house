@@ -1578,7 +1578,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     left: 0 !important;
     width: 100% !important;
     height: 100vh !important;
-    background: #080808 !important; /* solid background to prevent overlaps! */
+    background: linear-gradient(105deg, rgba(14,101,93,0.96) 0%, rgba(18,17,35,0.96) 50%, rgba(48,16,81,0.96) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
     align-items: center;
     justify-content: center;
     gap: 40px;
