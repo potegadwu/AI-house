@@ -62,22 +62,34 @@
     const isEn = window.location.pathname.includes('/en/');
     const lang = isEn ? 'en' : 'pl';
     
-    // HTML is mostly pre-populated statically by the build script, but applying it covers JS-based dynamic inputs.
     applyLang(lang);
 
     const langBtn = $('#langToggle');
     if (langBtn) {
       langBtn.textContent = isEn ? 'PL' : 'EN';
       langBtn.addEventListener('click', () => {
-        const currentUrl = window.location.href;
+        const path = window.location.pathname;
+        const hash = window.location.hash;
+        
         if (isEn) {
-           // Redirect to PL
-           window.location.href = currentUrl.replace('/en/', '/');
+          // Switch to PL
+          let plPath = path.replace('/en/', '/');
+          if (plPath.endsWith('/privacy-policy.html')) {
+            plPath = plPath.replace('/privacy-policy.html', '/polityka-prywatnosci.html');
+          }
+          if (plPath === '' || plPath.endsWith('/en')) plPath = '/';
+          window.location.href = window.location.origin + plPath + hash;
         } else {
-           // Redirect to EN
-           const path = window.location.pathname;
-           const newPath = path.endsWith('/') ? '/en/index.html' : '/en' + path.substring(path.lastIndexOf('/'));
-           window.location.href = window.location.origin + newPath;
+          // Switch to EN
+          let enPath = path;
+          if (enPath.endsWith('/polityka-prywatnosci.html')) {
+            enPath = enPath.replace('/polityka-prywatnosci.html', '/en/privacy-policy.html');
+          } else if (enPath.endsWith('/') || enPath === '' || enPath.endsWith('/index.html')) {
+            enPath = '/en/index.html';
+          } else {
+            enPath = '/en' + enPath.substring(enPath.lastIndexOf('/'));
+          }
+          window.location.href = window.location.origin + enPath + hash;
         }
       });
     }
